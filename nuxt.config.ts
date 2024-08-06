@@ -3,7 +3,7 @@ import { resolve } from 'pathe'
 
 export default defineNuxtConfig({
   app: {
-    baseURL: "/current/sparc-app-isan",
+    baseURL: "/2024/sparc-app-isan",
     head: {
       title: 'SPARC Portal',
       meta: [
@@ -183,11 +183,11 @@ export default defineNuxtConfig({
       SHOW_REHYDRATION_FEATURE: process.env.SHOW_REHYDRATION_FEATURE || 'false',
       SHOW_DEVICE_TYPE: process.env.SHOW_DEVICE_TYPE || 'false',
       gtm: {
-        id: process.env.GOOGLE_TAG_MANAGER_ID || 'GTM-TPT2CVCS',
+        id: process.env.GOOGLE_TAG_MANAGER_ID || 'GTM-WMPKMHCD',
         defer: true,
         compatibility: false,
         source: 'https://www.googletagmanager.com/gtm.js',
-        enabled:  false,
+        enabled:  true,
         debug: true,
         loadScript: true,
         enableRouterSync: true,
@@ -199,7 +199,7 @@ export default defineNuxtConfig({
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
     },
     app: {
-      baseURL: "/current/sparc-app-isan"
+      baseURL: "/2024/sparc-app-isan"
     }
   },
   /*
