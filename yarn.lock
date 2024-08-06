@@ -126,10 +126,10 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/mapintegratedvuer@1.3.4-isan.1":
-  version "1.3.4-isan.1"
-  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.3.4-isan.1.tgz#9c53ab13ed57faea5551e56d0d4541f1eef4cb7f"
-  integrity sha512-/61ogpsZ4UztHZQy3TTAxXapDwqabW7ugjOk4WSFPznO2Knb++d8tihLcsnBPX+ax6vynFWA8V1K0dcop7EiFA==
+"@abi-software/mapintegratedvuer@1.3.4-isan.2":
+  version "1.3.4-isan.2"
+  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.3.4-isan.2.tgz#f7f504b00f393ba774f0e46596304d28038dac47"
+  integrity sha512-1/pCd9La8vMxliLMbia1o4ZEde6cTxQvGOdtoFYeAPnU1npR6YRyQCeaoLGg+juOZdhDuETKNguPyCr0k5CwqQ==
   dependencies:
     "@abi-software/flatmapvuer" "1.3.2-isan.0"
     "@abi-software/map-side-bar" "^2.4.0-isan-2"
