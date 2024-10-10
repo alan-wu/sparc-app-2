@@ -22,7 +22,7 @@
     "sass": "^1.66.1"
   },
   "dependencies": {
-    "@abi-software/mapintegratedvuer": "1.6.0-sim2-0",
+    "@abi-software/mapintegratedvuer": "1.6.0-sim2-1",
     "@abi-software/plotvuer": "1.0.3",
     "@abi-software/simulationvuer": "2.0.7",
     "@element-plus/nuxt": "^1.0.6",
