@@ -74,13 +74,13 @@
               <div class="newsletter-archive mt-16">
                 <div class="heading2 mt-24">Current Newsletter</div>
                 <div ref="newsletterArchive" id="newsletter-archive" />
-                <a class="mt-8" href="//us2.campaign-archive.com/home/?u=e60c48f231a30b544eed731ea&id=c81a347bd8"
+                <a class="mt-8" href="https://docs.sparc.science/docs/sparc-plug-newsletter-archive"
                   target="_blank">
                   View all Newsletters<svgo-icon-open />
                 </a>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="12" class="newsletter-wrap right-panel">
+            <el-col :xs="24" :sm="12" class="newsletter-wrap get-involved">
               <div class="heading2 mt-24">Get Involved</div>
               <div class="body1 mb-16 mt-8">Empower SPARC to promote your science and interests by submitting your
                 science story, news, or event.</div>
@@ -254,7 +254,7 @@ export default {
   margin-bottom: 2rem;
   @media (min-width: 48em) {
     margin-bottom: 0;
-    &.right-panel {
+    &.get-invovled {
       border-left: 2px solid #d8d8d8;
     }
   }
