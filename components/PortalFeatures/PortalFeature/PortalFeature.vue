@@ -13,10 +13,8 @@
       class="icon"
       :src=iconUrl
     />
-    <div class="body1 mt-16">
-      {{ description }}
-    </div>
-    <nuxt-link class="button-link" :to="buttonLink">
+    <div class="body1 mt-16" v-html="parseMarkdown(description)" />
+    <a class="button-link" :href="buttonLink">
       <el-button class="secondary">
         {{ buttonText }}
       </el-button>
@@ -26,9 +24,12 @@
 
 <script>
 import { pathOr } from 'ramda'
+import marked from '@/mixins/marked/index'
 
 export default {
   name: 'PortalFeature',
+
+  mixins: [marked],
 
   props: {
     feature: {

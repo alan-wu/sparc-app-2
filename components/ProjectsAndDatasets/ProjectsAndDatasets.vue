@@ -1,12 +1,13 @@
 <template>
-  <div class="section-container container py-32">
-    <div v-if="isProject" class="heading2 mb-32">Projects &amp; Datasets</div>
+  <div class="section-container container py-24">
+    <div v-if="isProject" class="heading2 mb-24">Projects &amp; Datasets</div>
     <div v-else class="heading2 mb-32">Resources &amp; Datasets</div>
     <div class="row">
       <div class="col p-16">
         <template v-if="isProject">
           <div class="body2 mb-16">Here is a project you might be interested in:</div>
           <projects-and-datasets-card 
+            v-if="projectOrResource.fields"
             :title="projectOrResource.fields.title" 
             :description="projectOrResource.fields.shortDescription" 
             :banner="projectOrResource.fields.banner" 
@@ -20,7 +21,8 @@
         <!--If not a project then we assume it is a tool/resource since it must be one or the other-->
         <template v-else>
           <div class="body2 mb-16">Here is a resource you might be interested in:</div>
-          <projects-and-datasets-card 
+          <projects-and-datasets-card
+            v-if="projectOrResource.fields"
             :title="projectOrResource.fields.name" 
             :description="projectOrResource.fields.description" 
             :banner="projectOrResource.fields.logo.fields.file.url" 
@@ -32,7 +34,7 @@
           </nuxt-link>
         </template>
       </div>
-      <div class="col p-16">
+      <div v-if="dataset.title" class="col p-16">
         <div class="body2 mb-16">{{ datasetSectionTitle }}</div>
         <projects-and-datasets-card 
           :title="dataset.title" 

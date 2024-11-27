@@ -36,7 +36,7 @@
         <div class="body1 mb-8">
           Search within category
         </div>
-        <search-controls-contentful class="search-bar" placeholder="Enter search criteria" :path="$route.path"
+        <search-controls-contentful class="search-bar" placeholder="Enter search criteria (e.g., researcher name or other keywords)" :path="$route.path"
           showSearchText />
       </div>
     </div>
@@ -174,12 +174,21 @@ export default {
     const route = useRoute()
     if (route.query.type == 'projects') {
       const focusQuery = route.query.selectedProjectsAnatomicalFocusIds
-      let newPath = '/about/projects?consortiaType=SPARC'
+      const consortiaType = route.query.selectedProjectsFundingIds
+      let newPath = '/about/projects?'
+      // Because we used to allow multiple projects to be selected at once before they became seperate tabs we now just re-direct to the SPARC
+      // project by default if more than 1 project was selected in the url. If only one was set then we can re-direct to that project
+      if (consortiaType) {
+        const consortiaTypes = consortiaType.split(",")
+        if (consortiaTypes.length == 1) {
+          newPath += `consortiaType=${consortiaTypes[0]}`
+        } 
+      }
       if (focusQuery) {
         newPath += `&selectedProjectsAnatomicalFocusIds=${focusQuery}`
       }
       const router = useRouter()
-      await router.replace({ path: newPath })
+      router.push(newPath)
     }
     const { $algoliaClient } = useNuxtApp()
     const algoliaSortOptions = [
@@ -443,7 +452,9 @@ export default {
                 'item.description',
                 'item.modalities',
                 'anatomy.organ',
-                'organisms.primary.species.name'
+                'organisms.primary.species.name',
+                'pennsieve.owner.first.name',
+                'pennsieve.owner.last.name'
               ],
               highlightPreTag: `<${HIGHLIGHT_HTML_TAG}>`,
               highlightPostTag: `</${HIGHLIGHT_HTML_TAG}>`
