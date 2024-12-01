@@ -18,7 +18,7 @@
       <el-button class="secondary">
         {{ buttonText }}
       </el-button>
-    </nuxt-link>
+    </a>
   </div>
 </template>
 
