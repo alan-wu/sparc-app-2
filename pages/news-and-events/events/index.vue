@@ -8,7 +8,7 @@
     <Meta name="twitter:description" :content="`Browse ${searchTypes[1].label}`" />
   </Head>
   <div class="page-data">
-    <breadcrumb :breadcrumb="breadcrumb" title="Events" />
+    <Breadcrumb :breadcrumb="breadcrumb" title="Events" />
     <div class="container">
       <h1 hidden>Search for events</h1>
       <div class="search-tabs__container">
@@ -68,11 +68,11 @@
               :lg='18'
             >
               <div class="search-heading mt-32 mb-16">
-                <div class="label1" v-show="events.items.length">
-                  {{ events.total }} Results | Showing
+                <div class="label1" v-show="eventItems?.length">
+                  {{ eventsData?.total }} Results | Showing
                   <client-only>
                     <pagination-menu
-                      :page-size="events.limit"
+                      :page-size="eventsData?.limit"
                       @update-page-size="onPaginationLimitChange"
                     />
                   </client-only>
@@ -91,34 +91,34 @@
               <div ref="eventsWrap" class="subpage">
                 <client-only>
                   <event-list-item
-                    v-for="item in events.items"
-                    :key="item.sys.id"
+                    v-for="(item, index) in eventItems"
+                    :key="`${item.sys.id} - ${index}`"
                     :item="item"
                     :show-past-events-divider="showPastEventsDivider && item.sys.id == firstPastEventId"
                   />
                   <alternative-search-results-news
                     ref="altSearchResults"
-                    :search-had-results="events.items.length > 0"
+                    :search-had-results="eventItems?.length > 0"
                     @vue:mounted="altResultsMounted"
                   />
                 </client-only>
               </div>
               <div class="search-heading">
-                <div class="label1" v-if="events.items.length">
-                  {{ events.total }} Results | Showing
+                <div class="label1" v-if="eventItems?.length">
+                  {{ eventsData?.total }} Results | Showing
                   <client-only>
                     <pagination-menu
-                      :page-size="events.limit"
+                      :page-size="eventsData?.limit"
                       @update-page-size="onPaginationLimitChange"
                     />
                   </client-only>
                 </div>
                 <client-only>
                   <pagination
-                    v-if="events.limit < events.total"
+                    v-if="eventsData?.limit < eventsData?.total"
                     :selected="curSearchPage"
-                    :page-size="events.limit"
-                    :total-count="events.total"
+                    :page-size="eventsData?.limit"
+                    :total-count="eventsData?.total"
                     @select-page="onPaginationPageChange"
                   />
                 </client-only>
@@ -134,8 +134,9 @@
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script setup>
+import { ref, computed, watch } from 'vue'
+import { useRoute, useAsyncData } from '#app'
 import { pathOr, propOr } from 'ramda'
 import EventsFacetMenu from '@/components/FacetMenu/EventsFacetMenu.vue'
 import EventListItem from '@/components/EventListItem/EventListItem.vue'
@@ -143,186 +144,146 @@ import SearchControlsContentful from '@/components/SearchControlsContentful/Sear
 import SortMenu from '@/components/SortMenu/SortMenu.vue'
 import SubmitNewsSection from '~/components/NewsEventsResourcesPage/SubmitNewsSection.vue'
 import AlternativeSearchResultsNews from '~/components/AlternativeSearchResults/AlternativeSearchResultsNews.vue'
-
 import { fetchEvents } from '../model'
 
 const searchTypes = [
-  {
-    label: 'News',
-    path: 'news'
-  },
-  {
-    label: 'Events',
-    path: 'events'
-  },
-  {
-    label: 'Community Spotlight',
-    path: 'community-spotlight'
-  }
+  { label: 'News', path: 'news' },
+  { label: 'Events', path: 'events' },
+  { label: 'Community Spotlight', path: 'community-spotlight' }
 ]
 
 const sortOptions = [
-  {
-    label: 'Upcoming',
-    id: 'upcoming',
-    sortOrder: '-fields.upcomingSortOrder'
-  },
-  {
-    label: 'Latest',
-    id: 'latest',
-    sortOrder: '-fields.startDate'
-  },
-  {
-    label: 'A-Z',
-    id: 'alphabatical',
-    sortOrder: 'fields.title'
-  },
-  {
-    label: 'Z-A',
-    id: 'reverseAlphabatical',
-    sortOrder: '-fields.title'
-  },
+  { label: 'Upcoming', id: 'upcoming', sortOrder: '-fields.upcomingSortOrder' },
+  { label: 'Latest', id: 'latest', sortOrder: '-fields.startDate' },
+  { label: 'A-Z', id: 'alphabatical', sortOrder: 'fields.title' },
+  { label: 'Z-A', id: 'reverseAlphabatical', sortOrder: '-fields.title' }
 ]
 
-export default {
-  name: 'EventsPage',
+const route = useRoute()
+const { $contentfulClient } = useNuxtApp()
 
-  components: {
-    AlternativeSearchResultsNews,
-    EventsFacetMenu,
-    EventListItem,
-    SearchControlsContentful,
-    SortMenu,
-    SubmitNewsSection
-  },
+const altSearchResults = ref(null)
+const eventsFacetMenu = ref(null)
 
-  async setup() {
-    const route = useRoute()
-    const { $contentfulClient } = useNuxtApp()
-    const events = await fetchEvents($contentfulClient, route.query.search, undefined, undefined, undefined, undefined, 10, 0)
-    return {
-      events: ref(events)
-    }
-  },
+const selectedSortOption = ref(sortOptions[0])
 
-  data() {
-    return {
-      searchTypes,
-      selectedSortOption: sortOptions[0],
-      sortOptions,
-      breadcrumb: [
-        {
-          label: 'Home',
-          to: {
-            name: 'index'
-          }
-        },
-        {
-          label: 'News & Events',
-          to: {
-            name: 'news-and-events'
-          }
-        }
-      ]
-    }
-  },
+const breadcrumb = [
+  { label: 'Home', to: { name: 'index' } },
+  { label: 'News & Events', to: { name: 'news-and-events' } }
+]
 
-  watch: {
-    '$route.query': {
-      handler: async function() {
-        const { $contentfulClient } = useNuxtApp()
-        this.events = await fetchEvents(
-          $contentfulClient,
-          this.$route.query.search, 
-          this.$refs.eventsFacetMenu?.getStartLessThanDate(), 
-          this.$refs.eventsFacetMenu?.getStartGreaterThanOrEqualToDate(),
-          this.eventTypes, 
-          this.sortOrder, 
-          10, 
-          0
-        )
-        this.$refs.altSearchResults?.retrieveAltTotals()
-      },
-      immediate: true
-    },
-  },
+// Fetch events data using `useAsyncData` for server-side rendering
+const { data: eventsData } = useAsyncData('eventsData', async () => {
+  return await fetchEvents($contentfulClient, route.query.search, startLessThanDate.value, startGreaterThanOrEqualToDate.value, eventTypes.value, sortOrder.value, 10, 0)
+})
 
-  computed: {
-    /**
-     * Compute the current page based off the limit and the offset
-     * @returns {Number}
-     */
-    curSearchPage: function() {
-      return this.events.skip / this.events.limit + 1
-    },
-    startLessThanDate: function() {
-      return this.$refs.eventsFacetMenu?.getStartLessThanDate()
-    },
-    startGreaterThanOrEqualToDate: function() {
-      return this.$refs.eventsFacetMenu?.getStartGreaterThanOrEqualToDate()
-    },
-    eventTypes: function() {
-      return this.$route.query.selectedEventTypeOptions || undefined
-    },
-    sortOrder: function() {
-      return propOr('-fields.startDate', 'sortOrder', this.selectedSortOption)
-    },
-    firstPastEventId: function() {
-      const events = propOr([], 'items', this.events)
-      for (let i = 0; i < events.length; i++) {
-        const event = events[i]
-        const upcomingSortOrder = pathOr("", ['fields','upcomingSortOrder'], event)
-        if (upcomingSortOrder < 0) {
-          return pathOr("", ['sys','id'], event)
-        }
-      }
-      return -1
-    },
-    showPastEventsDivider: function() {
-      if (this.selectedSortOption.id != "upcoming") {
-        return false
-      }
-      const events = propOr([], 'items', this.events)
-      if (events.length == 0) {
-        return false
-      }
-      const firstEventId = pathOr(-1, ['sys', 'id'], events[0])
-      return this.firstPastEventId != firstEventId
-    }
-  },
+const eventItems = computed(() => {
+  return eventsData.value?.items
+})
 
-  methods: {
-    /**
-     * Get more events for the new page
-     * @param {Number} page
-     */
-    async onPaginationPageChange(page) {
-      const { $contentfulClient } = useNuxtApp()
-      const { limit } = this.events
-      const offset = (page - 1) * limit
-      const response = await fetchEvents($contentfulClient, this.$route.query.search, this.startLessThanDate, this.startGreaterThanOrEqualToDate, this.eventTypes, this.sortOrder, limit, offset)
-      this.events = response
-    },
-    /**
-     * Update limit based on pagination menu selection and get more events
-     * @param {Number} limit
-     */
-    async onPaginationLimitChange(limit) {
-      const { $contentfulClient } = useNuxtApp()
-      const newLimit = limit === 'View All' ? this.events.total : limit
-      const response = await fetchEvents($contentfulClient, this.$route.query.search, this.startLessThanDate, this.startGreaterThanOrEqualToDate, this.eventTypes, this.sortOrder, newLimit, 0)
-      this.events = response
-    },
-    async onSortOptionChange(option) {
-      const { $contentfulClient } = useNuxtApp()
-      this.selectedSortOption = option
-      const response = await fetchEvents($contentfulClient, this.$route.query.search, this.startLessThanDate, this.startGreaterThanOrEqualToDate, this.eventTypes, this.sortOrder, this.events.limit, 0)
-      this.events = response
-    },
-    altResultsMounted() {
-      this.$refs.altSearchResults?.retrieveAltTotals()
+const startLessThanDate = computed(() => {
+  return eventsFacetMenu.value?.getStartLessThanDate()
+})
+
+const startGreaterThanOrEqualToDate = computed(() => {
+  return eventsFacetMenu.value?.getStartGreaterThanOrEqualToDate()
+})
+
+const eventTypes = computed(() => {
+  return route.query.selectedEventTypeOptions || undefined
+})
+
+const sortOrder = computed(() => {
+  return propOr('-fields.startDate', 'sortOrder', selectedSortOption.value)
+})
+
+const curSearchPage = computed(() => {
+  return eventsData.value?.skip / eventsData.value?.limit + 1
+})
+
+const firstPastEventId = computed(() => {
+  if (!eventItems?.value) return -1
+
+  for (let i = 0; i < eventItems.value.length; i++) {
+    const event = eventItems.value[i];
+    const upcomingSortOrder = pathOr("", ['fields', 'upcomingSortOrder'], event);
+    if (upcomingSortOrder < 0) {
+      return pathOr("", ['sys', 'id'], event)
     }
   }
+  return -1
+})
+
+const showPastEventsDivider = computed(() => {
+  if (selectedSortOption.value?.id !== "upcoming") {
+    return false
+  }
+
+  const firstEventId = pathOr(-1, [0, 'sys', 'id'], eventItems?.value)
+  return firstPastEventId.value !== firstEventId
+})
+
+watch(
+  () => route.query,
+  async () => {
+    // Have to do this anywhere we are setting eventsData.value in order to force reactivity to work since we are relying on nested reactivity causing some Vue reactivity quirkyness with eventsData.items.
+    eventsData.value = { ...eventsData.value, items: [] }
+    await nextTick()
+    eventsData.value = await fetchEvents(
+      $contentfulClient,
+      route.query.search, 
+      startLessThanDate.value, 
+      startGreaterThanOrEqualToDate.value,
+      eventTypes.value, 
+      sortOrder.value, 
+      10, 
+      0
+    )
+    altSearchResults.value?.retrieveAltTotals()
+  }
+)
+
+onMounted(async () => {
+  eventsData.value = await fetchEvents(
+      $contentfulClient,
+      route.query.search, 
+      startLessThanDate.value, 
+      startGreaterThanOrEqualToDate.value,
+      eventTypes.value, 
+      sortOrder.value, 
+      10, 
+      0
+    )
+  altSearchResults.value?.retrieveAltTotals()
+})
+
+const onPaginationPageChange = async (page) => {
+  const limit = eventsData.value?.limit || 10
+  const offset = (page - 1) * limit || 0
+  const response = await fetchEvents($contentfulClient, route.query.search, startLessThanDate.value, startGreaterThanOrEqualToDate.value, eventTypes.value, sortOrder.value, limit, offset)
+  eventsData.value = { ...eventsData.value, items: [] }
+  await nextTick()
+  eventsData.value = response
+}
+
+const onPaginationLimitChange = async (limit) => {
+  const newLimit = limit === 'View All' ? eventsData.value?.total : limit
+  const response = await fetchEvents($contentfulClient, route.query.search, startLessThanDate.value, startGreaterThanOrEqualToDate.value, eventTypes.value, sortOrder.value, newLimit, 0)
+  eventsData.value = { ...eventsData.value, items: [] }
+  await nextTick()
+  eventsData.value = response
+}
+
+const onSortOptionChange = async (option) => {
+  selectedSortOption.value = option
+  const response = await fetchEvents($contentfulClient, route.query.search, startLessThanDate.value, startGreaterThanOrEqualToDate.value, eventTypes.value, sortOrder.value, eventsData.value.limit, 0)
+  eventsData.value = { ...eventsData.value, items: [] }
+  await nextTick()
+  eventsData.value = response
+}
+
+const altResultsMounted = () => {
+  altSearchResults.value?.retrieveAltTotals()
 }
 </script>
 

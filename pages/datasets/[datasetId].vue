@@ -22,7 +22,7 @@
     <Meta name="DC.publisher" content="Pennsieve Discover" />
     <Meta name="DC.date" :content="originallyPublishedDate" scheme="DCTERMS.W3CDTF" />
     <Meta name="DC.version" :content="datasetInfo?.version.toString()" />
-    <Meta name="robots" content="noindex, nofollow" />
+    <Link rel="canonical" :href="canonicalLink" />
   </Head>
   <div class="dataset-details pb-16">
 
@@ -37,6 +37,15 @@
       </template>
       <div v-else-if="showTombstone">
         <tombstone :dataset-details="datasetInfo" />
+      </div>
+      <div v-else-if="!isDatasetIndexed" class="container">
+        <div class="heading2 subpage">
+          <b>{{datasetName}}</b>
+          <hr class="my-16"/>
+          <div class="heading3">
+            The dataset with identifier: <b>{{ datasetInfo.doi }}</b> was published on {{ latestVersionDate }} and is currently being indexed into the SPARC Portal. Please check back periodically for updates.
+          </div>
+        </div>
       </div>
       <div class="details-container" v-else>
         <el-row :gutter="16">
@@ -54,7 +63,7 @@
                   :dataset-records="datasetRecords" :loading-markdown="loadingMarkdown" :dataset-tags="datasetTags" />
                 <dataset-about-info class="body1" v-show="activeTabId === 'about'"
                   :latestVersionRevision="latestVersionRevision" :latestVersionDate="latestVersionDate"
-                  :associated-projects="associatedProjects" />
+                  :associated-projects="associatedProjects" :award-ids="sparcAwardNumbers"/>
                 <citation-details class="body1" v-show="activeTabId === 'cite'" :doi-value="datasetInfo.doi" />
                 <dataset-files-info class="body1" v-if="hasFiles" v-show="activeTabId === 'files'" />
                 <source-code-info class="body1" v-if="hasSourceCode" v-show="activeTabId === 'source'" :repoLink="sourceCodeLink"/>
@@ -234,7 +243,8 @@ export default {
     const datasetFacetsData = await getAlgoliaFacets(algoliaIndex, facetPropPathMapping, filter).then(data => {
       return data
     })
-
+    // If the algolia index returns nothing than the dataset has not been indexed and we should not display the details page
+    const isDatasetIndexed = !isEmpty(datasetFacetsData)
     const typeFacet = datasetFacetsData.find(child => child.key === 'item.types.name')
     const datasetTypeName = typeFacet !== undefined ? typeFacet.children[0].label : 'dataset'
     const store = useMainStore()
@@ -290,6 +300,7 @@ export default {
       })
 
       const creators = contributors?.concat(org)
+      const canonicalLink = `${config.public.ROOT_URL}/datasets/${datasetId}`
       const doi = propOr('', 'doi', datasetDetails)
       const doiLink = doi ? `https://doi.org/${doi}` : ''
       let originallyPublishedDate = propOr('', 'firstPublishedAt', datasetDetails)
@@ -309,7 +320,9 @@ export default {
         algoliaIndex,
         hasError: false,
         originallyPublishedDate,
-        creators
+        creators,
+        canonicalLink,
+        isDatasetIndexed
       }
     } catch (error) {
       const status = pathOr('', ['response', 'status'], error)
@@ -446,7 +459,8 @@ export default {
       return pathOr('', ['params', 'datasetId'], this.$route)
     },
     hasFiles: function () {
-      return this.fileCount >= 1
+      // do not show the files tab for code repos
+      return this.fileCount >= 1 && !this.hasSourceCode
     },
     fileCount: function () {
       return propOr('0', 'fileCount', this.datasetInfo)

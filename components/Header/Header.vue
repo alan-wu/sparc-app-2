@@ -77,8 +77,8 @@
                 </li>
               </ul>
               <div class="mobile-navigation__links--social">
-                <a href="https://twitter.com/sparc_science" target="_blank">
-                  <svgo-icon-twitter class="social-media-icon pr-16" />
+                <a href="https://bsky.app/profile/sparc.science" target="_blank">
+                  <svgo-icon-bluesky class="social-media-icon pr-16"/>
                 </a>
                 <a href="https://www.youtube.com/results?search_query=sparc+nih" target="_blank">
                   <svgo-icon-youtube class="social-media-icon" />
@@ -156,8 +156,11 @@ export default {
       }
       return path.substring(0, endIndex)
     },
-    currentUrl: function() {
-      return encodeURIComponent(this.$route.fullPath)
+    currentUrl: function () {
+      const config = useRuntimeConfig()
+      const url = new URL(this.$route.fullPath, config.public.ROOT_URL)
+      url.searchParams.delete('source_url') // Remove existing source_url in order to prevent indexing recursion
+      return encodeURIComponent(url.pathname + url.search)
     },
   },
 

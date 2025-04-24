@@ -10,16 +10,40 @@
   <div class="maps">
     <breadcrumb :breadcrumb="breadcrumb" :title="title" />
     <page-hero class="py-24">
-      <h1>Maps</h1>
-      <p>
-        SPARC is creating detailed PNS maps based on SPARC data and information
-        available from the literature. The maps you see here are not yet
-        comprehensive and are largely derived from regions of the nervous system
-        where SPARC data has been published on this site, supplemented in some
-        regions by published knowledge of rat anatomy. New connectivity and
-        species specificity in anatomy and connectivity will be added as the
-        SPARC program progresses.
-      </p>
+      <div class="page-hero-content">
+        <div>
+          <h1>Maps</h1>
+          <p>
+            SPARC is creating detailed PNS maps based on SPARC data and information
+            available from the literature. The maps you see here are not yet
+            comprehensive and are largely derived from regions of the nervous system
+            where SPARC data has been published on this site, supplemented in some
+            regions by published knowledge of rat anatomy. New connectivity and
+            species specificity in anatomy and connectivity will be added as the
+            SPARC program progresses.
+          </p>
+        </div>
+        <div class="portal-features">
+          <div class="feature-container" v-for="item in appEntries">
+            <img class="logo" :src="item.logoUrl" />
+            <el-popover width="fit-content" trigger="click">
+              <template #reference>
+                <el-button class="secondary">Open {{ item.buttonText }}</el-button>
+              </template>
+              <template #default>
+                <div class="popover-content" style="display: flex; flex-direction: column; gap: 0.5rem">
+                  <el-button 
+                    v-for="entry in mapEntries[item.buttonText]" 
+                    @click="setCurrentEntry(entry, item.buttonText)"
+                  >
+                    {{ entry }}
+                  </el-button>
+                </div>
+              </template>
+            </el-popover>
+          </div>
+        </div>
+      </div>
     </page-hero>
     <div ref="mappage" class="page-wrap portalmapcontainer">
       <MapViewer class="mapviewer" ref="mapviewer" :state="state" :starting-map="startingMap" :options="options"
@@ -29,12 +53,12 @@
 </template>
 
 <script>
-
 import flatmaps from '@/services/flatmaps'
 import scicrunch from '@/services/scicrunch'
 
 import FetchPennsieveFile from '@/mixins/fetch-pennsieve-file'
 
+import { pathOr } from 'ramda'
 import { extractS3BucketName } from '@/utils/common'
 import { successMessage, failMessage } from '@/utils/notification-messages'
 import { getAlgoliaFacets, facetPropPathMapping } from '@/utils/algolia'
@@ -237,8 +261,8 @@ const restoreStateWithUUID = async (route, $axios, sparcApi) => {
   let state = undefined
   let successMessage = undefined
   let failMessage = undefined
-  if (route.query.id) {
-    uuid = route.query.id
+  const maxRetry = 3
+  const getState = async (uuid) => {
     await $axios.post(`${sparcApi}/map/getstate`, {
       uuid: uuid,
     })
@@ -254,7 +278,15 @@ const restoreStateWithUUID = async (route, $axios, sparcApi) => {
           `Sorry! We can not retrieve the saved stated. Please check later or consider submitting a bug report.`
       })
   }
-
+  if (route.query.id) {
+    uuid = route.query.id
+    for (let attempt = 0; attempt < maxRetry && !successMessage; attempt++) {
+      await getState(uuid)
+    }
+  }
+  if (successMessage) {
+    failMessage = undefined
+  }
   return [uuid, state, successMessage, failMessage]
 }
 
@@ -310,11 +342,25 @@ const openViewWithQuery = async (router, route, $axios, sparcApi, algoliaIndex, 
   return [startingMap, organ_name, currentEntry, successMessage, failMessage, facets]
 }
 
+const constructMapEntries = (apps) => {
+  if (!apps) return []
+  return apps.filter((app) => app.fields.url.startsWith('/apps/maps?type=')).map((app) => {
+    const words = pathOr('', ['fields', 'logo', 'fields', 'title'], app).split(" ");
+    const buttonText = words.map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    }).join(" ");
+    return {
+      buttonText,
+      logoUrl: pathOr('', ['fields', 'logo', 'fields', 'file', 'url'], app),
+    }
+  })
+}
+
 export default {
   name: 'MapsPage',
   async setup() {
     const config = useRuntimeConfig()
-    const { $algoliaClient, $axios, $pennsieveApiClient } = useNuxtApp()
+    const { $algoliaClient, $axios, $pennsieveApiClient, $contentfulClient } = useNuxtApp()
     const router = useRouter()
     const route = useRoute()
     let startingMap = "AC"
@@ -342,6 +388,7 @@ export default {
       options.sparcApi = options.sparcApi + '/'
     }
     const algoliaIndex = await $algoliaClient.initIndex(config.public.ALGOLIA_INDEX)
+    const appPage = await $contentfulClient.getEntry(config.public.ctf_apps_page_id)
 
     if (route.query.id) {
       [uuid, state, successMessage, failMessage] = await restoreStateWithUUID(route, $axios, options.sparcApi)
@@ -369,7 +416,8 @@ export default {
       facets,
       uuid,
       state,
-      viewingMode
+      viewingMode,
+      appEntries: constructMapEntries(appPage.fields?.apps)
     }
   },
   data() {
@@ -390,7 +438,12 @@ export default {
           label: 'SPARC Apps',
         },
       ],
-      shareLink: `${process.env.ROOT_URL}${this.$route.fullPath}`
+      shareLink: `${process.env.ROOT_URL}${this.$route.fullPath}`,
+      mapEntries: {
+        'AC Map': ['Human Female', 'Human Male', 'Rat', 'Mouse', 'Pig', 'Cat'],
+        '3D Whole Body': ['Human', 'Rat'],
+        'FC Map': ['Functional Connectivity'],
+      }
     }
   },
   mounted: function () {
@@ -413,20 +466,38 @@ export default {
     updateUUID: function () {
       let url = this.options.sparcApi + `map/getshareid`
       let state = this._instance.getState()
-      fetch(url, {
+      let maxRetry = 3
+      const getShareLink = (attempt) => {
+        fetch(url, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',
         },
         body: JSON.stringify({ state: state }),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          if (response.ok) {
+            return response.json()
+          }
+          throw new Error('Unsuccessful attempt to get shareid')
+        })
         .then((data) => {
           this.uuid = data.uuid
           this.$router.replace({ query: { id: data.uuid } }).then(() => {
             this.shareLink = `${this.options.rootUrl}${this.$route.fullPath}`
           })
         })
+        .catch((error) => {
+          console.log(`Unable to create permalink: attempt ${attempt} of ${maxRetry}`)
+          if (maxRetry > attempt) {
+            getShareLink(attempt + 1)
+          } else {
+            this.shareLink = `We have encountered an error, please try again.`
+            failMessage("We are unable to create a permalink at this moment, please try again later.")
+          }
+        })
+      }
+      getShareLink(1)
     },
     facetsUpdated: function () {
       if (this.facets.length > 0 && this._instance) this._instance.openSearch(this.facets, "")
@@ -434,6 +505,19 @@ export default {
     currentEntryUpdated: function () {
       if (this._instance && this.currentEntry) {
         this._instance.setCurrentEntry(this.currentEntry)
+      }
+    },
+    setCurrentEntry: function (entry, type) {
+      let mapEntry = {}      
+      if (type === 'AC Map') {
+        mapEntry = {type: 'MultiFlatmap', resource: entry}
+      } else if (type === '3D Whole Body') {
+        mapEntry = {type: 'Scaffold', isBodyScaffold: true, label: entry}
+      } else if (type === 'FC Map') {
+        mapEntry = {type: 'Flatmap', resource: entry.replace(' ', ''), label: 'Functional'}
+      }
+      if (this._instance) {
+        this._instance.setCurrentEntry(mapEntry)
       }
     },
     changeViewingMode: function (map) {
@@ -485,6 +569,36 @@ export default {
       padding-top: 0;
     }
   }
+}
+
+.page-hero-content {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 64rem) {
+    display: block;
+  }
+}
+
+.portal-features {
+  display: flex;
+  width: 33%;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .logo {
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.el-button+.el-button {
+  margin-left: 0px;
 }
 </style>
 
