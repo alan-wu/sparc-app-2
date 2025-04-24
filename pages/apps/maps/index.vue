@@ -442,7 +442,7 @@ export default {
       mapEntries: {
         'AC Map': ['Human Female', 'Human Male', 'Rat', 'Mouse', 'Pig', 'Cat'],
         '3D Whole Body': ['Human', 'Rat'],
-        'FC Map': ['Functional Connectivity'],
+        'FC Map': ['Functional Connectivity', "Blood volume control", "ISAN"],
       }
     }
   },
@@ -514,7 +514,16 @@ export default {
       } else if (type === '3D Whole Body') {
         mapEntry = {type: 'Scaffold', isBodyScaffold: true, label: entry}
       } else if (type === 'FC Map') {
-        mapEntry = {type: 'Flatmap', resource: entry.replace(' ', ''), label: 'Functional'}
+        let resource = entry.replace(' ', '')
+        let label = 'Functional'
+        if (entry === "Blood volume control") {
+          resource = 'FC:blood-volume-control'
+          label = "Blood volume control"
+        } else if (entry === "ISAN") {
+          resource = 'BG:CardioVascular'
+          label = "ISAN"
+        }
+        mapEntry = {type: 'Flatmap', resource: resource, label: label}
       }
       if (this._instance) {
         this._instance.setCurrentEntry(mapEntry)
