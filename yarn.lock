@@ -46,12 +46,12 @@
     unplugin-vue-components "^0.26.0"
     vue "^3.4.15"
 
-"@abi-software/flatmapvuer@^1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.10.0.tgz#cf6d715575a0678eaecaf6f3d3a1262acfa5c690"
-  integrity sha512-0eBxq4jERdFhyNQD3QjIPlxxfJIr83PzxMIoz5POc8qlwD2YJK8VgOSz+x3ne9D5TM+n22roydpuV99CO2gaPw==
+"@abi-software/flatmapvuer@^1.10.1-beta.1":
+  version "1.10.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.10.1-beta.1.tgz#423784183a40abbcac4e2e9bd14ba04fba1b612d"
+  integrity sha512-BhpBDvQ8qP5aNEb7GN7EPS8ZP3w9bQRB2su0tgZy0k2oo1lRp+qisbiq2Y1WVbqTgoUM2rtQmh/x1zB0xWnadA==
   dependencies:
-    "@abi-software/map-utilities" "^1.6.0"
+    "@abi-software/map-utilities" "^1.6.1-beta.0"
     "@abi-software/sparc-annotation" "0.3.2"
     "@abi-software/svg-sprite" "^1.0.1"
     "@element-plus/icons-vue" "^2.3.1"
@@ -75,10 +75,10 @@
     unplugin-vue-components "^0.26.0"
     vue "^3.4.21"
 
-"@abi-software/map-side-bar@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/map-side-bar/-/map-side-bar-2.9.0.tgz#2c2e80313e32421935fe4b54ce2a3da018b223b8"
-  integrity sha512-FpCwfXn8VDBeznB7liPxP0QNaME3UKF1/il2SwwiLKn8ahUaxE8tG/khntKq7FdFtUUAc0bcbuZQrCmnihyoNw==
+"@abi-software/map-side-bar@^2.9.1-beta.1":
+  version "2.9.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/map-side-bar/-/map-side-bar-2.9.1-beta.1.tgz#c3fcbf628f40f32e9cbd42249ca0655a2024e5cb"
+  integrity sha512-SXePBkqZ2DujflhaVwnLPEncb2RJkLr2QGzhuNREmvsVQxarTqarPjTEK3v4Lc1ZyKTjvoEFpTvWqj52pbJbqQ==
   dependencies:
     "@abi-software/gallery" "^1.1.2"
     "@abi-software/map-utilities" "^1.6.0"
@@ -106,17 +106,30 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/mapintegratedvuer@1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.10.1.tgz#79e06fd474903d88bf433d97eb81c8e0dc504f7f"
-  integrity sha512-lJPzcv8KCGD1PnG7ZJaPanp9P/yDegvvVoTwEhR1AGVPOn2lLJ5FcHTgrTIBdL1H/8oX5dLRui94gCvzyq5ZQg==
+"@abi-software/map-utilities@^1.6.1-beta.0":
+  version "1.6.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@abi-software/map-utilities/-/map-utilities-1.6.1-beta.0.tgz#a70e66556d223c6b092d3305d1df3a11e31f134e"
+  integrity sha512-ce8eaZvirqNwISbdcy3ZNZtD4CLTto+JkA4by2mGEKBQG6EeVr7Y2WPHzGMwsH27Xs+sTITOXC8D6p8Kq7+PJA==
   dependencies:
-    "@abi-software/flatmapvuer" "^1.10.0"
-    "@abi-software/map-side-bar" "^2.9.0"
-    "@abi-software/map-utilities" "^1.6.0"
+    "@abi-software/svg-sprite" "^1.0.1"
+    "@element-plus/icons-vue" "^2.3.1"
+    cytoscape "^3.30.2"
+    cytoscape-dagre "^2.5.0"
+    element-plus "2.8.4"
+    mitt "^3.0.1"
+    vue "^3.4.21"
+
+"@abi-software/mapintegratedvuer@1.10.2-beta.0":
+  version "1.10.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.10.2-beta.0.tgz#089893c2d65e2b41e9178fe92f01932724a45ff4"
+  integrity sha512-IBxRYXym2/Z+pfMNserbuNDQs3kpuQlXp+ju6jSOjFNGMlzlFYROaSu2BMidXgU7rLVoCl/eI5wqYRIdBIWTEg==
+  dependencies:
+    "@abi-software/flatmapvuer" "^1.10.1-beta.1"
+    "@abi-software/map-side-bar" "^2.9.1-beta.1"
+    "@abi-software/map-utilities" "^1.6.1-beta.0"
     "@abi-software/plotvuer" "1.0.4"
     "@abi-software/scaffoldvuer" "^1.10.0"
-    "@abi-software/simulationvuer" "^2.0.11"
+    "@abi-software/simulationvuer" "^2.0.12"
     "@abi-software/sparc-annotation" "0.3.2"
     "@abi-software/svg-sprite" "^1.0.1"
     "@element-plus/icons-vue" "^2.3.1"
@@ -185,10 +198,10 @@
     vue3-component-svg-sprite "^0.0.1"
     zincjs "^1.14.0"
 
-"@abi-software/simulationvuer@2.0.11", "@abi-software/simulationvuer@^2.0.11":
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/@abi-software/simulationvuer/-/simulationvuer-2.0.11.tgz#2663cb3c77cb1ecd5b7f1e0c0c21a171052f1b44"
-  integrity sha512-LdhCayFyseE9Ncs/4jaMdBOAk4sijR25cV2Sf8VTwn9dlwkA9AZxmaXmrb4y5SxjSpsF/+0T0hKD+ym7dCGTRQ==
+"@abi-software/simulationvuer@2.0.12", "@abi-software/simulationvuer@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@abi-software/simulationvuer/-/simulationvuer-2.0.12.tgz#c0a37ea12a4279810cd9c756d3d68c34b43946c0"
+  integrity sha512-7M2rxnAo78zfbLYoJhaREvaQ4S5maBrIgFBH5eO44cozAzNNJqdr5HlkDHBf9cJ2rR/w9ckZav2U3NycVqf3Ng==
   dependencies:
     "@abi-software/plotvuer" "1.0.4"
     element-plus "2.8.4"
