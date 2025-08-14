@@ -1,6 +1,7 @@
 <template>
   <div class="simulation-vuer-container">
-    <simulation-vuer v-if="ready" :apiLocation="apiLocation" :id="resource" />
+      <opencor v-if="ready && datasetInfo && file" :omex="resource"/>
+      <simulation-vuer v-else-if="ready" :apiLocation="apiLocation" :id="resource" />
   </div>
   <generic-viewer-metadata
     v-if="datasetInfo && file"
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+  import OpenCOR from '@opencor/opencor'
   import { SimulationVuer } from '@abi-software/simulationvuer'
   import { extractS3BucketName } from "@/utils/common"
   import GenericViewerMetadata from "@/components/ViewersMetadata/GenericViewerMetadata.vue"
@@ -19,6 +21,7 @@
     name: 'SimulationViewer',
     components: {
       GenericViewerMetadata,
+      OpenCOR,
       SimulationVuer,
     },
     props: {
@@ -71,6 +74,7 @@
 </script>
 
 <style scope lang="scss">
+@import '@opencor/opencor/style.css';
 @import '@abi-software/simulationvuer/dist/style.css';
 .simulation-vuer-container {
   height: 600px;
