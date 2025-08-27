@@ -33,6 +33,7 @@
     "@abi-software/simulationvuer": "2.0.14",
     "@element-plus/nuxt": "^1.0.10",
     "@nuxtjs/sitemap": "^5.1.4",
+    "@opencor/opencor": "^0.20250813.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
     "algoliasearch": "^4.19.1",
@@ -63,7 +64,7 @@
   "resolutions": {
     "string-width": "4.2.3",
     "mlly": "1.4.0",
-    "vue": "3.4.21"
+    "vue": "3.5.18"
   },
   "engines": {
     "node": "18.17.1"
