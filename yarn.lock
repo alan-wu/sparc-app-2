@@ -30,14 +30,14 @@
     minisearch "^2.2.1"
     polylabel "^1.1.0"
 
-"@abi-software/flatmapvuer@1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.11.0.tgz#cfed4e5979da17e1591f58bbcdd99cebb059d599"
-  integrity sha512-iy9p+RbgjbOfJ+ri2DfppAgBw9I2bA62zZaoUuDy/v95NoCP9nEvHsIy2kGwu474Fj66g0FlRG0wI2y8OI5Qeg==
+"@abi-software/flatmapvuer@1.11.1":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.11.1.tgz#b599259f183a12696591fe65c749cbcfc04686e2"
+  integrity sha512-Qi/xZVd4FmI+rLxd2q9Mi110T7P+47bh1KATJLyVe3rGV1j/mXO04FiD9P29NjHSYZrcSKz2HgbqF/slvzrsAQ==
   dependencies:
     "@abi-software/map-utilities" "^1.7.0"
     "@abi-software/sparc-annotation" "0.3.2"
-    "@abi-software/svg-sprite" "^1.0.1"
+    "@abi-software/svg-sprite" "1.0.2"
     "@element-plus/icons-vue" "^2.3.1"
     css-element-queries "^1.2.2"
     element-plus "2.8.4"
@@ -65,24 +65,24 @@
     unplugin-vue-components "^0.26.0"
     vue "^3.4.15"
 
-"@abi-software/gallery@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@abi-software/gallery/-/gallery-1.1.2.tgz#14c0978dadffa277a5b37e1905ea365829c957fb"
-  integrity sha512-VeKL8k12yvm/m5Iiz83yq1PDzIThT3if+B9zQywOom3pWdUzmfCVfPZjeiJYcub6t/6BmZq1WZJmvDrCnVXgxw==
+"@abi-software/gallery@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@abi-software/gallery/-/gallery-1.2.0.tgz#cc8b83f6ab5581596af222a045397c9ab58cfb25"
+  integrity sha512-PPsnpYVQNeq0jpwtLoOV7J442thBme/0fVoHmwStqHEAhJaPODjTNc4TfbcaausNT++E7Y38WYMhAPA2YpJG/Q==
   dependencies:
     axios "^1.6.5"
     element-plus "2.8.4"
     unplugin-vue-components "^0.26.0"
     vue "^3.4.21"
 
-"@abi-software/map-side-bar@2.10.0":
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/map-side-bar/-/map-side-bar-2.10.0.tgz#8fe2b5c294af7ace02c35cc56d59f63fdc10cf0f"
-  integrity sha512-amslg5ljnnp7LbOBL9Jp0p9lFOfcTvqps9doIr/hpna70G/+SfZhpxCEZEbTQt8gstOfTzV9Omv59xX/kz5Jdg==
+"@abi-software/map-side-bar@2.10.2":
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/@abi-software/map-side-bar/-/map-side-bar-2.10.2.tgz#10b825fc76b6002ff8a7fd766fba7f36b01dde03"
+  integrity sha512-q8PihapiW2NBwlx74vP9dBdeyB9ut5ZkL80/bLbs9/BYUFVfLY/R2jDhleXjgeEcKxLwmYbEfisOosybwTm5BQ==
   dependencies:
-    "@abi-software/gallery" "^1.1.2"
+    "@abi-software/gallery" "^1.2.0"
     "@abi-software/map-utilities" "^1.7.0"
-    "@abi-software/svg-sprite" "^1.0.1"
+    "@abi-software/svg-sprite" "^1.0.2"
     "@element-plus/icons-vue" "^2.3.1"
     algoliasearch "^4.10.5"
     element-plus "2.8.4"
@@ -106,19 +106,19 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/mapintegratedvuer@1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.12.0.tgz#934b6615a6d3662fd4c7671e603db77d8bbfa435"
-  integrity sha512-zZKmAmxz2XfSR+3DYUo295gNHXo+u1xZRLJwaLYTfOHV+bs1NSjYsYxnEj3sG2oDZ2AodxIR+1wLprQG1kLrwg==
+"@abi-software/mapintegratedvuer@1.12.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.12.1.tgz#4dcbe223fc9ac82d74928c9b2b80186b3919e564"
+  integrity sha512-p2VYZGq87y4HeFMJQeEG1RX0hVDed7Y9398jXYV3vDPzVw99QMsqIfKoIqpc75lP+dfXpiRL8pMSfKi+37vEjQ==
   dependencies:
-    "@abi-software/flatmapvuer" "1.11.0"
-    "@abi-software/map-side-bar" "2.10.0"
+    "@abi-software/flatmapvuer" "1.11.1"
+    "@abi-software/map-side-bar" "2.10.2"
     "@abi-software/map-utilities" "1.7.0"
-    "@abi-software/plotvuer" "1.0.4"
-    "@abi-software/scaffoldvuer" "1.11.0"
-    "@abi-software/simulationvuer" "2.0.14"
+    "@abi-software/plotvuer" "1.0.5"
+    "@abi-software/scaffoldvuer" "1.11.2"
+    "@abi-software/simulationvuer" "2.0.17"
     "@abi-software/sparc-annotation" "0.3.2"
-    "@abi-software/svg-sprite" "^1.0.1"
+    "@abi-software/svg-sprite" "1.0.2"
     "@element-plus/icons-vue" "^2.3.1"
     "@vitejs/plugin-vue" "^4.6.2"
     css-element-queries "^1.2.3"
@@ -149,12 +149,12 @@
   dependencies:
     papaparse "^5.5.1"
 
-"@abi-software/plotvuer@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@abi-software/plotvuer/-/plotvuer-1.0.4.tgz#907ceceef0a4759e573e60a9cde3d754242b74b0"
-  integrity sha512-ptpD4qvH1bxVBakhuiO7N3YLpWIhnN86MSXNOM2ntB45AAdEyS49CLnZ9HJB2YvVUkZu/RCnFvz9uy32BJ5H3Q==
+"@abi-software/plotvuer@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@abi-software/plotvuer/-/plotvuer-1.0.5.tgz#803f056040b68344e6933c8079569b75d69cd4af"
+  integrity sha512-xtIeuahhi9/biyZvoP/zRuzhUVJBniixIAqoX81VYCBQqmpM1Z8qGm9fBzYisIrYHBTxiAySXTp+B2Ve/zgnvw==
   dependencies:
-    "@abi-software/svg-sprite" "^1.0.1"
+    "@abi-software/svg-sprite" "1.0.2"
     css-element-queries "^1.2.3"
     element-plus "2.8.4"
     papaparse "^5.5.2"
@@ -165,14 +165,14 @@
     vue-draggable-resizable "^2.2.0"
     vue-router "^4.2.5"
 
-"@abi-software/scaffoldvuer@1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/scaffoldvuer/-/scaffoldvuer-1.11.0.tgz#900caacae9c5594be43eef8f52492b5f67eec534"
-  integrity sha512-H6OFVjm0kZmF8Cmu73ou+UHSvv7WPB4Bm+uVk3nuMM15NkinxxeSMoGyIdf+bWrXrsr3L8ojJcfdcg3aSQrB3A==
+"@abi-software/scaffoldvuer@1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@abi-software/scaffoldvuer/-/scaffoldvuer-1.11.2.tgz#79877024b9c9741ef4402d9fbf9c7c63dccf79de"
+  integrity sha512-NGRE4gU+Ro+zZbrlBmVJflgDZFNgzuBpcYNHWQ4S26ZFPQ5a5lWjPzHZjc01JaQk2JpHm9VhBlaXVV7yfaTZZg==
   dependencies:
-    "@abi-software/map-utilities" "^1.7.0"
+    "@abi-software/map-utilities" "1.7.0"
     "@abi-software/sparc-annotation" "^0.3.2"
-    "@abi-software/svg-sprite" "^1.0.1"
+    "@abi-software/svg-sprite" "1.0.2"
     "@element-plus/icons-vue" "^2.3.1"
     core-js "^3.22.5"
     element-plus "2.8.4"
@@ -182,15 +182,14 @@
     unplugin-vue-components "^0.26.0"
     vue "^3.4.21"
     vue-router "^4.2.5"
-    vue3-component-svg-sprite "^0.0.1"
-    zincjs "^1.15.0"
+    zincjs "1.15.1"
 
-"@abi-software/simulationvuer@2.0.14":
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/@abi-software/simulationvuer/-/simulationvuer-2.0.14.tgz#6f627806ac7f42e02b2410648363bcf6d5e5e313"
-  integrity sha512-nv2HRSN/g0mvF+4iWEzU8qEgwmCtvqrid7ESa83iGHtFy/T7kHWtC40zu77Y9/VI9OTLNxBWuJVKypZhuZKsNA==
+"@abi-software/simulationvuer@2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@abi-software/simulationvuer/-/simulationvuer-2.0.17.tgz#e1d84259541dff298a718021cbb4f63778b640c0"
+  integrity sha512-fa3x/bXiMZgijAIc19fDuirO/mt7nDISZrMyXZA0GXZVVUflFQSNRsz73jqGQkY7ZqdJy0rfT/+oWpTJoGWyAA==
   dependencies:
-    "@abi-software/plotvuer" "1.0.4"
+    "@abi-software/plotvuer" "1.0.5"
     element-plus "2.8.4"
     jsonschema "^1.4.0"
     mathjs "^13.0.2"
@@ -221,6 +220,13 @@
   integrity sha512-K1fFe3m/su/Tva1qMxKdv6a1AIQiEoVajNfMQycqAg8NM2Z9KDmiXqAe5PgPYx7YDOy3SluRNtysSXRqhyutgg==
   dependencies:
     vue "^3.3.13"
+
+"@abi-software/svg-sprite@1.0.2", "@abi-software/svg-sprite@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@abi-software/svg-sprite/-/svg-sprite-1.0.2.tgz#5df468a00675bba71c8722c7ba734fc777725c79"
+  integrity sha512-pvNwhKgacuCC8tG30NTFOfPZBFZl9nzJiM2klGAm4wzQaZ52nuTKu1Xpj1mUxSeh/BenFHszybaaYT8x+NJuFg==
+  dependencies:
+    vue "^3.4.21"
 
 "@abi-software/svg-sprite@^1.0.1":
   version "1.0.1"
@@ -3449,7 +3455,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.4", "@babel/runtime@^7.12.0", "@babel/runtime@^7.26.10", "@babel/runtime@^7.3.1":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.4", "@babel/runtime@^7.12.0", "@babel/runtime@^7.3.1":
   version "7.28.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.2.tgz#2ae5a9d51cc583bd1f5673b3bb70d6d819682473"
   integrity sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA==
@@ -3724,7 +3730,7 @@
     magic-string "^0.27.0"
     unplugin "^1.11.0"
 
-"@emnapi/core@^1.4.3":
+"@emnapi/core@^1.4.3", "@emnapi/core@^1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.4.5.tgz#bfbb0cbbbb9f96ec4e2c4fd917b7bbe5495ceccb"
   integrity sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q==
@@ -3732,14 +3738,14 @@
     "@emnapi/wasi-threads" "1.0.4"
     tslib "^2.4.0"
 
-"@emnapi/runtime@^1.4.3":
+"@emnapi/runtime@^1.4.3", "@emnapi/runtime@^1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@emnapi/runtime/-/runtime-1.4.5.tgz#c67710d0661070f38418b6474584f159de38aba9"
   integrity sha512-++LApOtY0pEEz1zrd9vy1/zXVaVJJ/EbAF3u0fXIzPJEDtnITsBGbbK0EkM72amhl/R5b+5xx0Y/QhcVOpuulg==
   dependencies:
     tslib "^2.4.0"
 
-"@emnapi/wasi-threads@1.0.4", "@emnapi/wasi-threads@^1.0.2":
+"@emnapi/wasi-threads@1.0.4", "@emnapi/wasi-threads@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@emnapi/wasi-threads/-/wasi-threads-1.0.4.tgz#703fc094d969e273b1b71c292523b2f792862bf4"
   integrity sha512-PJR+bOmMOPH8AtcTGAyYNiuJ3/Fcoj2XN/gBEWzDIKh254XO+mM9XoXHk5GNEhodxeMznbg7BlRojVbKN+gC6g==
@@ -4305,6 +4311,14 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@jridgewell/remapping@^2.3.4":
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/@jridgewell/remapping/-/remapping-2.3.5.tgz#375c476d1972947851ba1e15ae8f123047445aa1"
+  integrity sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.3.5"
+    "@jridgewell/trace-mapping" "^0.3.24"
+
 "@jridgewell/resolve-uri@^3.1.0":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.1.tgz#c08679063f279615a3326583ba3a90d1d82cc721"
@@ -4638,7 +4652,7 @@
     "@babel/runtime" "^7.12.0"
     gl-matrix "^3.4.0"
 
-"@napi-rs/wasm-runtime@^0.2.11":
+"@napi-rs/wasm-runtime@^0.2.12":
   version "0.2.12"
   resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz#3e78a8b96e6c33a6c517e1894efbd5385a7cb6f2"
   integrity sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==
@@ -5217,24 +5231,22 @@
     defu "^6.1.2"
     pathe "^1.1.1"
 
-"@opencor/opencor@^0.20250813.0":
-  version "0.20250813.0"
-  resolved "https://registry.yarnpkg.com/@opencor/opencor/-/opencor-0.20250813.0.tgz#e9a1280b44cf0753288e6e0357fe64bd4464c575"
-  integrity sha512-LLfAj9auD2EBTs+zkBzN0WWzYREiFqB1z4Ap/4WXDO92hu7ELn5Vjov66DfvQdoRSm9Vg1ZC/0C36O55vBbyeg==
+"@opencor/opencor@^0.20250826.0":
+  version "0.20250826.0"
+  resolved "https://registry.yarnpkg.com/@opencor/opencor/-/opencor-0.20250826.0.tgz#d3f43f84a692d8b71877054474d3fbde08878f64"
+  integrity sha512-PzKFH9M9WuhrjLSzuffqWFzHxhj4nvJVDktvxwXLKbOphBiJ2uthDQhj0gE2YP5wM2hVqXoMm0q/PChqMoCLSg==
   dependencies:
     "@primeuix/themes" "^1.2.3"
-    "@primevue/auto-import-resolver" "^4.3.7"
-    "@tailwindcss/postcss" "^4.1.11"
-    "@tailwindcss/vite" "^4.1.11"
-    "@vueuse/core" "^13.6.0"
+    "@primevue/auto-import-resolver" "4.2.5"
+    "@tailwindcss/postcss" "^4.1.12"
+    "@tailwindcss/vite" "^4.1.12"
+    "@vueuse/core" "12.8.2"
     js-cookie "^3.0.5"
     jsonschema "^1.5.0"
-    mathjs "^14.6.0"
-    plotly.js-gl2d-dist-min "^3.1.0"
     primeicons "^7.0.0"
-    primevue "^4.3.7"
+    primevue "4.2.5"
     quill "^2.0.3"
-    tailwindcss "^4.1.11"
+    tailwindcss "^4.1.12"
     tailwindcss-primeui "^0.6.1"
     ua-parser-js "^2.0.4"
 
@@ -5430,19 +5442,19 @@
   resolved "https://registry.yarnpkg.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz#a7f69e3665d3da9b115f9e71671dae1b97e13671"
   integrity sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==
 
+"@primeuix/styled@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@primeuix/styled/-/styled-0.3.2.tgz#a6093e81a66fc78b915b5e8d998cc73c2c47a1dc"
+  integrity sha512-ColZes0+/WKqH4ob2x8DyNYf1NENpe5ZguOvx5yCLxaP8EIMVhLjWLO/3umJiDnQU4XXMLkn2mMHHw+fhTX/mw==
+  dependencies:
+    "@primeuix/utils" "^0.3.2"
+
 "@primeuix/styled@^0.7.2":
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/@primeuix/styled/-/styled-0.7.2.tgz#36cfe3e743559ef5c31b0e87083fb05a26993ec6"
   integrity sha512-tIJ6byZezTYZ9YUICNSidQHOIQOQL3zeUgjwiX0JnBTK3+WCvy4DyCBcrJ94RtiX0WGFZSYNvaGaFkTo4jU8FQ==
   dependencies:
     "@primeuix/utils" "^0.6.1"
-
-"@primeuix/styles@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@primeuix/styles/-/styles-1.2.3.tgz#d7b80cf9a05503deaf8b11db6fd74c0155a8ea3f"
-  integrity sha512-+KwmQsLTYgVAqFADmO252btz40lstPML6r4QMNjxz4gLNCKVW3kPR0/aCouQx6/21+boXG1P68tu8Zk3FAKr2w==
-  dependencies:
-    "@primeuix/styled" "^0.7.2"
 
 "@primeuix/themes@^1.2.3":
   version "1.2.3"
@@ -5451,38 +5463,43 @@
   dependencies:
     "@primeuix/styled" "^0.7.2"
 
+"@primeuix/utils@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@primeuix/utils/-/utils-0.3.2.tgz#dbf92f6b5e18abe214f592a0b51bf4ca02a1f808"
+  integrity sha512-B+nphqTQeq+i6JuICLdVWnDMjONome2sNz0xI65qIOyeB4EF12CoKRiCsxuZ5uKAkHi/0d1LqlQ9mIWRSdkavw==
+
 "@primeuix/utils@^0.6.1":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@primeuix/utils/-/utils-0.6.1.tgz#34af8e05aa9a142bf3c290381b5e104dc15e52b5"
   integrity sha512-tQL/ZOPgCdD+NTimlUmhyD0ey8J1XmpZE4hDHM+/fnuBicVVmlKOd5HpS748LcOVRUKbWjmEPdHX4hi5XZoC1Q==
 
-"@primevue/auto-import-resolver@^4.3.7":
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/@primevue/auto-import-resolver/-/auto-import-resolver-4.3.7.tgz#477d2594de5d6b9b7f3903e948c1106f1ec2e2d2"
-  integrity sha512-U/gJ2q1XckszMcgViYsjz6+hCdhoCi+6l9JS6E93MFfsGji1NnlwM/+7ZDElGQ0CT8YuLXEOhg+HgR1Fiznljg==
+"@primevue/auto-import-resolver@4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@primevue/auto-import-resolver/-/auto-import-resolver-4.2.5.tgz#f76e81cf598dbcb449ee72777486332f5a8ef455"
+  integrity sha512-+jeH7QhzyKYYo1yWvJ/HDeHWTddvIbtI6/Gr4pY0hW94RHvRXlnWS20lrXGQ60P/3pkl6p423wysY1hhvsMUjQ==
   dependencies:
-    "@primevue/metadata" "4.3.7"
+    "@primevue/metadata" "4.2.5"
 
-"@primevue/core@4.3.7":
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/@primevue/core/-/core-4.3.7.tgz#0caa334efd9debe2e62bc8d8f814e6f51188de64"
-  integrity sha512-rYmEZTKs/C2Re+xFluY9R02+n4TcyJshooPPOG6zc23v/bmhrfcqCiS5gNiuXF/lYoOh4y8VTcHF6eZCZW724Q==
+"@primevue/core@4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@primevue/core/-/core-4.2.5.tgz#18a20e0b7c968da1bed1bb9d11aca3b116b34457"
+  integrity sha512-+oWBIQs5dLd2Ini4KEVOlvPILk989EHAskiFS3R/dz3jeOllJDMZFcSp8V9ddV0R3yDaPdLVkfHm2Q5t42kU2Q==
   dependencies:
-    "@primeuix/styled" "^0.7.2"
-    "@primeuix/utils" "^0.6.1"
+    "@primeuix/styled" "^0.3.2"
+    "@primeuix/utils" "^0.3.2"
 
-"@primevue/icons@4.3.7":
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/@primevue/icons/-/icons-4.3.7.tgz#2c5dcd875161f15e45172ca69cf8829917d7ae63"
-  integrity sha512-CKiOeiJzNSbELwbQdrgWHgmfcAmjNQXqRZtBGb8sUPrB8hjWf9lYMBAbcAuqJbyLFFcC0lFiB80CfBR07FNSHw==
+"@primevue/icons@4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@primevue/icons/-/icons-4.2.5.tgz#d39827908d80b8a2ef08d9d02e936ed7498f7264"
+  integrity sha512-WFbUMZhQkXf/KmwcytkjGVeJ9aGEDXjP3uweOjQZMmRdEIxFnqYYpd90wE90JE1teZn3+TVnT4ZT7ejGyEXnFQ==
   dependencies:
-    "@primeuix/utils" "^0.6.1"
-    "@primevue/core" "4.3.7"
+    "@primeuix/utils" "^0.3.2"
+    "@primevue/core" "4.2.5"
 
-"@primevue/metadata@4.3.7":
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/@primevue/metadata/-/metadata-4.3.7.tgz#88feed6ce41575d1863f2141914fcf54235f4db9"
-  integrity sha512-nTyedHcAuqDqO79+iiyCpFe/phJH5DZEwsx+M6jXSWohHhU8pRjiRCK1rU0exyHkUbaA/QkyUUJOVb/Gkwmh5A==
+"@primevue/metadata@4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@primevue/metadata/-/metadata-4.2.5.tgz#344acd1c8d14f75d60544f7e89e0a69d475d1e93"
+  integrity sha512-dABQ8BecGg6NRnrLx11MvmCQCFn2inUEmao8t17/Tc2wxwoXY315TaakDa5ebOdYnTG91lh+NX7SBpTH+MYIyQ==
 
 "@probe.gl/env@3.6.0", "@probe.gl/env@^3.5.0":
   version "3.6.0"
@@ -6025,126 +6042,126 @@
     "@types/express" "^4.7.0"
     file-system-cache "2.3.0"
 
-"@tailwindcss/node@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/node/-/node-4.1.11.tgz#d626af65fc9872e5e9d8884791d7e3856e945359"
-  integrity sha512-yzhzuGRmv5QyU9qLNg4GTlYI6STedBWRE7NjxP45CsFYYq9taI0zJXZBMqIC/c8fViNLhmrbpSFS57EoxUmD6Q==
+"@tailwindcss/node@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/node/-/node-4.1.12.tgz#9099c7c9a6b719b2cae265fecbb37e08ed3fd2a2"
+  integrity sha512-3hm9brwvQkZFe++SBt+oLjo4OLDtkvlE8q2WalaD/7QWaeM7KEJbAiY/LJZUaCs7Xa8aUu4xy3uoyX4q54UVdQ==
   dependencies:
-    "@ampproject/remapping" "^2.3.0"
-    enhanced-resolve "^5.18.1"
-    jiti "^2.4.2"
+    "@jridgewell/remapping" "^2.3.4"
+    enhanced-resolve "^5.18.3"
+    jiti "^2.5.1"
     lightningcss "1.30.1"
     magic-string "^0.30.17"
     source-map-js "^1.2.1"
-    tailwindcss "4.1.11"
+    tailwindcss "4.1.12"
 
-"@tailwindcss/oxide-android-arm64@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.1.11.tgz#1f387d8302f011b61c226deb0c3a1d2bd79c6915"
-  integrity sha512-3IfFuATVRUMZZprEIx9OGDjG3Ou3jG4xQzNTvjDoKmU9JdmoCohQJ83MYd0GPnQIu89YoJqvMM0G3uqLRFtetg==
+"@tailwindcss/oxide-android-arm64@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.1.12.tgz#27920fe61fa2743afe8a8ca296fa640b609d17d5"
+  integrity sha512-oNY5pq+1gc4T6QVTsZKwZaGpBb2N1H1fsc1GD4o7yinFySqIuRZ2E4NvGasWc6PhYJwGK2+5YT1f9Tp80zUQZQ==
 
-"@tailwindcss/oxide-darwin-arm64@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.1.11.tgz#acd35ffb7e4eae83d0a3fe2f8ea36cfcc9b21f7e"
-  integrity sha512-ESgStEOEsyg8J5YcMb1xl8WFOXfeBmrhAwGsFxxB2CxY9evy63+AtpbDLAyRkJnxLy2WsD1qF13E97uQyP1lfQ==
+"@tailwindcss/oxide-darwin-arm64@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.1.12.tgz#e8bd4798f26ec1d012bf0683aeb77449f71505cd"
+  integrity sha512-cq1qmq2HEtDV9HvZlTtrj671mCdGB93bVY6J29mwCyaMYCP/JaUBXxrQQQm7Qn33AXXASPUb2HFZlWiiHWFytw==
 
-"@tailwindcss/oxide-darwin-x64@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.1.11.tgz#a0022312993a3893d6ff0312d6e3c83c4636fef4"
-  integrity sha512-EgnK8kRchgmgzG6jE10UQNaH9Mwi2n+yw1jWmof9Vyg2lpKNX2ioe7CJdf9M5f8V9uaQxInenZkOxnTVL3fhAw==
+"@tailwindcss/oxide-darwin-x64@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.1.12.tgz#8ddb7e5ddfd9b049ec84a2bda99f2b04a86859f5"
+  integrity sha512-6UCsIeFUcBfpangqlXay9Ffty9XhFH1QuUFn0WV83W8lGdX8cD5/+2ONLluALJD5+yJ7k8mVtwy3zMZmzEfbLg==
 
-"@tailwindcss/oxide-freebsd-x64@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.1.11.tgz#dd8e55eb0b88fe7995b8148c0e0ae5fa27092d22"
-  integrity sha512-xdqKtbpHs7pQhIKmqVpxStnY1skuNh4CtbcyOHeX1YBE0hArj2romsFGb6yUmzkq/6M24nkxDqU8GYrKrz+UcA==
+"@tailwindcss/oxide-freebsd-x64@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.1.12.tgz#da1c0b16b7a5f95a1e400f299a3ec94fb6fd40ac"
+  integrity sha512-JOH/f7j6+nYXIrHobRYCtoArJdMJh5zy5lr0FV0Qu47MID/vqJAY3r/OElPzx1C/wdT1uS7cPq+xdYYelny1ww==
 
-"@tailwindcss/oxide-linux-arm-gnueabihf@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.1.11.tgz#02ee99090988847d3f13d277679012cbffcdde37"
-  integrity sha512-ryHQK2eyDYYMwB5wZL46uoxz2zzDZsFBwfjssgB7pzytAeCCa6glsiJGjhTEddq/4OsIjsLNMAiMlHNYnkEEeg==
+"@tailwindcss/oxide-linux-arm-gnueabihf@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.1.12.tgz#34e558aa6e869c6fe9867cb78ed7ba651b9fcaa4"
+  integrity sha512-v4Ghvi9AU1SYgGr3/j38PD8PEe6bRfTnNSUE3YCMIRrrNigCFtHZ2TCm8142X8fcSqHBZBceDx+JlFJEfNg5zQ==
 
-"@tailwindcss/oxide-linux-arm64-gnu@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.1.11.tgz#4837559c102bebe65089879f6a0278ed473b4813"
-  integrity sha512-mYwqheq4BXF83j/w75ewkPJmPZIqqP1nhoghS9D57CLjsh3Nfq0m4ftTotRYtGnZd3eCztgbSPJ9QhfC91gDZQ==
+"@tailwindcss/oxide-linux-arm64-gnu@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.1.12.tgz#0a00a8146ab6215f81b2d385056c991441bf390e"
+  integrity sha512-YP5s1LmetL9UsvVAKusHSyPlzSRqYyRB0f+Kl/xcYQSPLEw/BvGfxzbH+ihUciePDjiXwHh+p+qbSP3SlJw+6g==
 
-"@tailwindcss/oxide-linux-arm64-musl@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.1.11.tgz#bec465112a13a1383558ff36afdf28b8a8cb9021"
-  integrity sha512-m/NVRFNGlEHJrNVk3O6I9ggVuNjXHIPoD6bqay/pubtYC9QIdAMpS+cswZQPBLvVvEF6GtSNONbDkZrjWZXYNQ==
+"@tailwindcss/oxide-linux-arm64-musl@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.1.12.tgz#b138f494068884ae0d8c343dc1904b22f5e98dc6"
+  integrity sha512-V8pAM3s8gsrXcCv6kCHSuwyb/gPsd863iT+v1PGXC4fSL/OJqsKhfK//v8P+w9ThKIoqNbEnsZqNy+WDnwQqCA==
 
-"@tailwindcss/oxide-linux-x64-gnu@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.1.11.tgz#f9e47e6aa67ff77f32f7412bc9698d4278e101bf"
-  integrity sha512-YW6sblI7xukSD2TdbbaeQVDysIm/UPJtObHJHKxDEcW2exAtY47j52f8jZXkqE1krdnkhCMGqP3dbniu1Te2Fg==
+"@tailwindcss/oxide-linux-x64-gnu@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.1.12.tgz#5b9d5f23b15cdb714639f5b9741c0df5d610f794"
+  integrity sha512-xYfqYLjvm2UQ3TZggTGrwxjYaLB62b1Wiysw/YE3Yqbh86sOMoTn0feF98PonP7LtjsWOWcXEbGqDL7zv0uW8Q==
 
-"@tailwindcss/oxide-linux-x64-musl@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.1.11.tgz#7d6e8adcfb9bc84d8e2e2e8781d661edb9e41ba8"
-  integrity sha512-e3C/RRhGunWYNC3aSF7exsQkdXzQ/M+aYuZHKnw4U7KQwTJotnWsGOIVih0s2qQzmEzOFIJ3+xt7iq67K/p56Q==
+"@tailwindcss/oxide-linux-x64-musl@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.1.12.tgz#f68ec530d3ca6875ea9015bcd5dd0762ee5e2f5d"
+  integrity sha512-ha0pHPamN+fWZY7GCzz5rKunlv9L5R8kdh+YNvP5awe3LtuXb5nRi/H27GeL2U+TdhDOptU7T6Is7mdwh5Ar3A==
 
-"@tailwindcss/oxide-wasm32-wasi@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.1.11.tgz#a1762f4939c6ebaa824696fda2fd7db1b85fbed2"
-  integrity sha512-Xo1+/GU0JEN/C/dvcammKHzeM6NqKovG+6921MR6oadee5XPBaKOumrJCXvopJ/Qb5TH7LX/UAywbqrP4lax0g==
+"@tailwindcss/oxide-wasm32-wasi@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.1.12.tgz#9fd15a1ebde6076c42c445c5e305c31673ead965"
+  integrity sha512-4tSyu3dW+ktzdEpuk6g49KdEangu3eCYoqPhWNsZgUhyegEda3M9rG0/j1GV/JjVVsj+lG7jWAyrTlLzd/WEBg==
   dependencies:
-    "@emnapi/core" "^1.4.3"
-    "@emnapi/runtime" "^1.4.3"
-    "@emnapi/wasi-threads" "^1.0.2"
-    "@napi-rs/wasm-runtime" "^0.2.11"
-    "@tybys/wasm-util" "^0.9.0"
+    "@emnapi/core" "^1.4.5"
+    "@emnapi/runtime" "^1.4.5"
+    "@emnapi/wasi-threads" "^1.0.4"
+    "@napi-rs/wasm-runtime" "^0.2.12"
+    "@tybys/wasm-util" "^0.10.0"
     tslib "^2.8.0"
 
-"@tailwindcss/oxide-win32-arm64-msvc@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.1.11.tgz#70ba392dca0fa3707ebe27d2bd6ac3e69d35e3b7"
-  integrity sha512-UgKYx5PwEKrac3GPNPf6HVMNhUIGuUh4wlDFR2jYYdkX6pL/rn73zTq/4pzUm8fOjAn5L8zDeHp9iXmUGOXZ+w==
+"@tailwindcss/oxide-win32-arm64-msvc@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.1.12.tgz#938bcc6a82e1120ea4fe2ce94be0a8cdf3ae92c7"
+  integrity sha512-iGLyD/cVP724+FGtMWslhcFyg4xyYyM+5F4hGvKA7eifPkXHRAUDFaimu53fpNg9X8dfP75pXx/zFt/jlNF+lg==
 
-"@tailwindcss/oxide-win32-x64-msvc@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.1.11.tgz#cdcb9eea9225a346c0695f67f621990b0534763f"
-  integrity sha512-YfHoggn1j0LK7wR82TOucWc5LDCguHnoS879idHekmmiR7g9HUtMw9MI0NHatS28u/Xlkfi9w5RJWgz2Dl+5Qg==
+"@tailwindcss/oxide-win32-x64-msvc@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.1.12.tgz#b1ee2ed0ef2c4095ddec3684a1987e2b3613af36"
+  integrity sha512-NKIh5rzw6CpEodv/++r0hGLlfgT/gFN+5WNdZtvh6wpU2BpGNgdjvj6H2oFc8nCM839QM1YOhjpgbAONUb4IxA==
 
-"@tailwindcss/oxide@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide/-/oxide-4.1.11.tgz#569b668c99c337b7b8204bc5b6a833429755a05b"
-  integrity sha512-Q69XzrtAhuyfHo+5/HMgr1lAiPP/G40OMFAnws7xcFEYqcypZmdW8eGXaOUIeOl1dzPJBPENXgbjsOyhg2nkrg==
+"@tailwindcss/oxide@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide/-/oxide-4.1.12.tgz#13a6f806aafa9c83629c9a04acd92031aef83f1c"
+  integrity sha512-gM5EoKHW/ukmlEtphNwaGx45fGoEmP10v51t9unv55voWh6WrOL19hfuIdo2FjxIaZzw776/BUQg7Pck++cIVw==
   dependencies:
     detect-libc "^2.0.4"
     tar "^7.4.3"
   optionalDependencies:
-    "@tailwindcss/oxide-android-arm64" "4.1.11"
-    "@tailwindcss/oxide-darwin-arm64" "4.1.11"
-    "@tailwindcss/oxide-darwin-x64" "4.1.11"
-    "@tailwindcss/oxide-freebsd-x64" "4.1.11"
-    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.1.11"
-    "@tailwindcss/oxide-linux-arm64-gnu" "4.1.11"
-    "@tailwindcss/oxide-linux-arm64-musl" "4.1.11"
-    "@tailwindcss/oxide-linux-x64-gnu" "4.1.11"
-    "@tailwindcss/oxide-linux-x64-musl" "4.1.11"
-    "@tailwindcss/oxide-wasm32-wasi" "4.1.11"
-    "@tailwindcss/oxide-win32-arm64-msvc" "4.1.11"
-    "@tailwindcss/oxide-win32-x64-msvc" "4.1.11"
+    "@tailwindcss/oxide-android-arm64" "4.1.12"
+    "@tailwindcss/oxide-darwin-arm64" "4.1.12"
+    "@tailwindcss/oxide-darwin-x64" "4.1.12"
+    "@tailwindcss/oxide-freebsd-x64" "4.1.12"
+    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.1.12"
+    "@tailwindcss/oxide-linux-arm64-gnu" "4.1.12"
+    "@tailwindcss/oxide-linux-arm64-musl" "4.1.12"
+    "@tailwindcss/oxide-linux-x64-gnu" "4.1.12"
+    "@tailwindcss/oxide-linux-x64-musl" "4.1.12"
+    "@tailwindcss/oxide-wasm32-wasi" "4.1.12"
+    "@tailwindcss/oxide-win32-arm64-msvc" "4.1.12"
+    "@tailwindcss/oxide-win32-x64-msvc" "4.1.12"
 
-"@tailwindcss/postcss@^4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/postcss/-/postcss-4.1.11.tgz#4d844f7ff295c731ceab54934531bece7380ce0c"
-  integrity sha512-q/EAIIpF6WpLhKEuQSEVMZNMIY8KhWoAemZ9eylNAih9jxMGAYPPWBn3I9QL/2jZ+e7OEz/tZkX5HwbBR4HohA==
+"@tailwindcss/postcss@^4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/postcss/-/postcss-4.1.12.tgz#ac2423c3cc69d673e2965c6d1413504a6398e415"
+  integrity sha512-5PpLYhCAwf9SJEeIsSmCDLgyVfdBhdBpzX1OJ87anT9IVR0Z9pjM0FNixCAUAHGnMBGB8K99SwAheXrT0Kh6QQ==
   dependencies:
     "@alloc/quick-lru" "^5.2.0"
-    "@tailwindcss/node" "4.1.11"
-    "@tailwindcss/oxide" "4.1.11"
+    "@tailwindcss/node" "4.1.12"
+    "@tailwindcss/oxide" "4.1.12"
     postcss "^8.4.41"
-    tailwindcss "4.1.11"
+    tailwindcss "4.1.12"
 
-"@tailwindcss/vite@^4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/vite/-/vite-4.1.11.tgz#9af1c9d328b31e67c6a0657500bcaa78be6df9f7"
-  integrity sha512-RHYhrR3hku0MJFRV+fN2gNbDNEh3dwKvY8XJvTxCSXeMOsCRSr+uKvDWQcbizrHgjML6ZmTE5OwMrl5wKcujCw==
+"@tailwindcss/vite@^4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/vite/-/vite-4.1.12.tgz#f2839180aa7ba938a5247114e32ee9d57215e7f8"
+  integrity sha512-4pt0AMFDx7gzIrAOIYgYP0KCBuKWqyW8ayrdiLEjoJTT4pKTjrzG/e4uzWtTLDziC+66R9wbUqZBccJalSE5vQ==
   dependencies:
-    "@tailwindcss/node" "4.1.11"
-    "@tailwindcss/oxide" "4.1.11"
-    tailwindcss "4.1.11"
+    "@tailwindcss/node" "4.1.12"
+    "@tailwindcss/oxide" "4.1.12"
+    tailwindcss "4.1.12"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -6278,13 +6295,6 @@
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.10.0.tgz#2fd3cd754b94b378734ce17058d0507c45c88369"
   integrity sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==
-  dependencies:
-    tslib "^2.4.0"
-
-"@tybys/wasm-util@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.9.0.tgz#3e75eb00604c8d6db470bf18c37b7d984a0e3355"
-  integrity sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==
   dependencies:
     tslib "^2.4.0"
 
@@ -7147,14 +7157,15 @@
     "@vueuse/shared" "10.9.0"
     vue-demi ">=0.14.7"
 
-"@vueuse/core@^13.6.0":
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-13.6.0.tgz#4137f63dc4cef2ff8ae74ee146d6b6070d707878"
-  integrity sha512-DJbD5fV86muVmBgS9QQPddVX7d9hWYswzlf4bIyUD2dj8GC46R1uNClZhVAmsdVts4xb2jwp1PbpuiA50Qee1A==
+"@vueuse/core@12.8.2":
+  version "12.8.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-12.8.2.tgz#007c6dd29a7d1f6933e916e7a2f8ef3c3f968eaa"
+  integrity sha512-HbvCmZdzAu3VGi/pWYm5Ut+Kd9mn1ZHnn4L5G8kOQTPs/IwIAmJoBrmYk2ckLArgMXZj0AW3n5CAejLUO+PhdQ==
   dependencies:
     "@types/web-bluetooth" "^0.0.21"
-    "@vueuse/metadata" "13.6.0"
-    "@vueuse/shared" "13.6.0"
+    "@vueuse/metadata" "12.8.2"
+    "@vueuse/shared" "12.8.2"
+    vue "^3.5.13"
 
 "@vueuse/core@^9.1.0":
   version "9.13.0"
@@ -7180,10 +7191,10 @@
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-10.9.0.tgz#769a1a9db65daac15cf98084cbf7819ed3758620"
   integrity sha512-iddNbg3yZM0X7qFY2sAotomgdHK7YJ6sKUvQqbvwnf7TmaVPxS4EJydcNsVejNdS8iWCtDk+fYXr7E32nyTnGA==
 
-"@vueuse/metadata@13.6.0":
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-13.6.0.tgz#49196025c96c7daeb591c20a54b61cc336af99b6"
-  integrity sha512-rnIH7JvU7NjrpexTsl2Iwv0V0yAx9cw7+clymjKuLSXG0QMcLD0LDgdNmXic+qL0SGvgSVPEpM9IDO/wqo1vkQ==
+"@vueuse/metadata@12.8.2":
+  version "12.8.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-12.8.2.tgz#6cb3a4e97cdcf528329eebc1bda73cd7f64318d3"
+  integrity sha512-rAyLGEuoBJ/Il5AmFHiziCPdQzRt88VxR+Y/A/QhJ1EWtWqPBBAxTAFaSkviwEuOEZNtW8pvkPgoCZQ+HxqW1A==
 
 "@vueuse/metadata@9.13.0":
   version "9.13.0"
@@ -7208,10 +7219,12 @@
   dependencies:
     vue-demi ">=0.14.7"
 
-"@vueuse/shared@13.6.0":
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-13.6.0.tgz#872fdbd725fb4e3a12bd5aab85af9a5db0b1e481"
-  integrity sha512-pDykCSoS2T3fsQrYqf9SyF0QXWHmcGPQ+qiOVjlYSzlWd9dgppB2bFSM1GgKKkt7uzn0BBMV3IbJsUfHG2+BCg==
+"@vueuse/shared@12.8.2":
+  version "12.8.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-12.8.2.tgz#b9e4611d0603629c8e151f982459da394e22f930"
+  integrity sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==
+  dependencies:
+    vue "^3.5.13"
 
 "@vueuse/shared@9.13.0":
   version "9.13.0"
@@ -10008,7 +10021,7 @@ enhanced-resolve@^5.14.1:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
-enhanced-resolve@^5.18.1:
+enhanced-resolve@^5.18.3:
   version "5.18.3"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.18.3.tgz#9b5f4c5c076b8787c78fe540392ce76a88855b44"
   integrity sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==
@@ -11138,11 +11151,6 @@ fraction.js@^4.3.7:
   version "4.3.7"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
-
-fraction.js@^5.2.1:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-5.2.2.tgz#c1295bc47307c5f93f75790859645fd74edaa195"
-  integrity sha512-uXBDv5knpYmv/2gLzWQ5mBHGBRk9wcKTeWu6GLTUEQfjCxO09uM/mHDrojlL+Q1mVGIIFo149Gba7od1XPgSzQ==
 
 fresh@0.5.2:
   version "0.5.2"
@@ -12805,7 +12813,7 @@ jiti@^1.21.6:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.21.6.tgz#6c7f7398dd4b3142767f9a168af2f317a428d268"
   integrity sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==
 
-jiti@^2.4.2:
+jiti@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.5.1.tgz#bd099c1c2be1c59bbea4e5adcd127363446759d0"
   integrity sha512-twQoecYPiVA5K/h6SxtORw/Bs3ar+mLUtoPSc7iMXzQzK8d7eJ/R09wmTwAjiamETn1cXYPGfNnu7DMoHgu12w==
@@ -13667,21 +13675,6 @@ mathjs@^13.0.2:
     decimal.js "^10.4.3"
     escape-latex "^1.2.0"
     fraction.js "^4.3.7"
-    javascript-natural-sort "^0.7.1"
-    seedrandom "^3.0.5"
-    tiny-emitter "^2.1.0"
-    typed-function "^4.2.1"
-
-mathjs@^14.6.0:
-  version "14.6.0"
-  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-14.6.0.tgz#2506e36fd475479eaaf178d0bbeafc101996ace3"
-  integrity sha512-5vI2BLB5GKQmiSK9BH6hVkZ+GgqpdnOgEfmHl7mqVmdQObLynr63KueyYYLCQMzj66q69mV2XZZGQqqxeftQbA==
-  dependencies:
-    "@babel/runtime" "^7.26.10"
-    complex.js "^2.2.5"
-    decimal.js "^10.4.3"
-    escape-latex "^1.2.0"
-    fraction.js "^5.2.1"
     javascript-natural-sort "^0.7.1"
     seedrandom "^3.0.5"
     tiny-emitter "^2.1.0"
@@ -15299,11 +15292,6 @@ pkg-types@^1.2.0:
     mlly "^1.7.2"
     pathe "^1.1.2"
 
-plotly.js-gl2d-dist-min@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/plotly.js-gl2d-dist-min/-/plotly.js-gl2d-dist-min-3.1.0.tgz#1aecada28141b030b78eaccb7ad140d9c66025d0"
-  integrity sha512-r/9/YPn2tIWFzaf8x0zOHqjzJm/su/mBb3AAbl36xgO+VTIBZd6LBiwADr/ojJ6oSlOO+VSMgwVA1Hocjwj9FA==
-
 plotly.js@2.35.3:
   version "2.35.3"
   resolved "https://registry.yarnpkg.com/plotly.js/-/plotly.js-2.35.3.tgz#6a7787d63b4d334948c281aa9c8df7fb941b425e"
@@ -15729,16 +15717,15 @@ primeicons@^7.0.0:
   resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-7.0.0.tgz#6b25c3fdcb29bb745a3035bdc1ed5902f4a419cf"
   integrity sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==
 
-primevue@^4.3.7:
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/primevue/-/primevue-4.3.7.tgz#6f2886e7e272e8d0d272d36e37e0eb1c8e2d29aa"
-  integrity sha512-yyknh2kFjSGwRyxqmUUWy/pY4FK1vxoonGH3eQdtd8k/sGl5JpSQ2f0tXpR79lV6dcGf3FZPL1B5JNR11zJfmg==
+primevue@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-4.2.5.tgz#6229e4a9be4e3ae9de83c2b1fc4360011b9bf9de"
+  integrity sha512-7UMOIJvdFz4jQyhC76yhNdSlHtXvVpmE2JSo2ndUTBWjWJOkYyT562rQ4ayO+bMdJLtzBGqgY64I9ZfEvNd7vQ==
   dependencies:
-    "@primeuix/styled" "^0.7.2"
-    "@primeuix/styles" "^1.2.3"
-    "@primeuix/utils" "^0.6.1"
-    "@primevue/core" "4.3.7"
-    "@primevue/icons" "4.3.7"
+    "@primeuix/styled" "^0.3.2"
+    "@primeuix/utils" "^0.3.2"
+    "@primevue/core" "4.2.5"
+    "@primevue/icons" "4.2.5"
 
 probe-image-size@^7.2.3:
   version "7.2.3"
@@ -17514,10 +17501,10 @@ tailwindcss-primeui@^0.6.1:
   resolved "https://registry.yarnpkg.com/tailwindcss-primeui/-/tailwindcss-primeui-0.6.1.tgz#fcb74738e80d4253c14521114773f5ce638c6ee8"
   integrity sha512-T69Rylcrmnt8zy9ik+qZvsLuRIrS9/k6rYJSIgZ1trnbEzGDDQSCIdmfyZknevqiHwpSJHSmQ9XT2C+S/hJY4A==
 
-tailwindcss@4.1.11, tailwindcss@^4.1.11:
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.11.tgz#799af3e98c19c5baaefafc6e0c16304a0e684854"
-  integrity sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==
+tailwindcss@4.1.12, tailwindcss@^4.1.12:
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.12.tgz#7baeed5b5ac77370571c2baa72ee06e0050fc0a8"
+  integrity sha512-DzFtxOi+7NsFf7DBtI3BJsynR+0Yp6etH+nRPTbpWnS2pZBaSksv/JGctNwSWzbFjp0vxSqknaUylseZqMDGrA==
 
 tapable@^2.2.0:
   version "2.2.1"
@@ -18711,14 +18698,7 @@ vue-social-sharing@^4.0.0-alpha4:
   resolved "https://registry.yarnpkg.com/vue-social-sharing/-/vue-social-sharing-4.0.0-alpha4.tgz#48d17f4ff2828c60689f2a065df86588af2bd1fb"
   integrity sha512-hMbgpZkY5aRAiznSB/sgzdMVgdSbkmIHEaELX7pUbuUd6KS1Z/GAi7a/q0Qn+GFn0+6qMMvwyp3ZOE0+WYPQ1w==
 
-vue3-component-svg-sprite@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/vue3-component-svg-sprite/-/vue3-component-svg-sprite-0.0.1.tgz#9341ef25f0d6a42618cfce94241f18445f80f21f"
-  integrity sha512-B1bjgv+qegg+oqjJ5i21kGJR8mEQAp+mREpkWs8ojV1vPF3AuUBMNhca1QRnsADPd7FNxcB0hRxUtNmVo/61gg==
-  dependencies:
-    vue "^3.3.13"
-
-vue@3.4.21, vue@3.5.18, vue@^3.3.13, vue@^3.3.4, vue@^3.4.15, vue@^3.4.21:
+vue@3.4.21, vue@3.5.18, vue@^3.3.13, vue@^3.3.4, vue@^3.4.15, vue@^3.4.21, vue@^3.5.13:
   version "3.5.18"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.5.18.tgz#3d622425ad1391a2b0138323211ec784f4415686"
   integrity sha512-7W4Y4ZbMiQ3SEo+m9lnoNpV9xG7QVMLa+/0RFwwiAVkeYoyGXqWE85jabU4pllJNUzqfLShJ5YLptewhCWUgNA==
@@ -19142,10 +19122,10 @@ zhead@^2.2.4:
   resolved "https://registry.yarnpkg.com/zhead/-/zhead-2.2.4.tgz#87cd1e2c3d2f465fa9f43b8db23f9716dfe6bed7"
   integrity sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==
 
-zincjs@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.15.0.tgz#3abfb30c2db543dec5bd839fcc3e88b89a850a85"
-  integrity sha512-QbUhJKkfMF765gWcsgZmD9Q4K4ZQiPUIsJyGkfYxlisbJm56xJPhM/39RJjYBvph0Qi8OWCRCzmymV6srY4jGA==
+zincjs@1.15.1:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.15.1.tgz#0a61c8160c982617ba883bc692d947105ca892cb"
+  integrity sha512-t1YEl7nxupZRfYCrTqU1cm5hCwMfOOkDzCI0q2yxfsYaGw0mk3o7zUA3/XIKxMvWdtGi/Pi4bT8Fi9Q0r6aHCw==
   dependencies:
     css-element-queries "^1.2.2"
     lodash "^4.17.19"

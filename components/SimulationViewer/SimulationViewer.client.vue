@@ -1,6 +1,6 @@
 <template>
   <div class="simulation-vuer-container">
-      <opencor v-if="ready && datasetInfo && file" :omex="resource"/>
+      <OpenCOR v-if="ready && datasetInfo && file" :omex="resource"/>
       <simulation-vuer v-else-if="ready" :apiLocation="apiLocation" :id="resource" />
   </div>
   <generic-viewer-metadata
