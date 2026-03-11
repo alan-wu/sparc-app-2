@@ -93,17 +93,17 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/mapintegratedvuer@1.16.3-simulation.0":
-  version "1.16.3-simulation.0"
-  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.16.3-simulation.0.tgz#51ecee6871f5da190071d522a463242f47082e8a"
-  integrity sha512-023SOBFyLQiBEuHFk+Dnb/EJfO+hgarHQ7GlT/UvJHVAjTvEa1ws0xl7WpV5oWH7/X4lDZBbmG4XRB0Zgn5UIA==
+"@abi-software/mapintegratedvuer@1.16.3-simulation.1":
+  version "1.16.3-simulation.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.16.3-simulation.1.tgz#692687255548bb9655a5b79468e2ffb442835a11"
+  integrity sha512-IHnYyfIEr6OU4m3toTuBR21bedpp4rMuANNFXdD4aVRTnKuPpmO1ez3QC5qNPZI4mz8rTvaWHAbsV0guaJSkiA==
   dependencies:
     "@abi-software/flatmapvuer" "1.12.3-beta.1"
     "@abi-software/map-side-bar" "2.13.0"
     "@abi-software/map-utilities" "1.7.7"
     "@abi-software/plotvuer" "1.0.7"
     "@abi-software/scaffoldvuer" "1.13.1-beta.2"
-    "@abi-software/simulationvuer" "3.0.12"
+    "@abi-software/simulationvuer" "3.0.13"
     "@abi-software/sparc-annotation" "0.3.2"
     "@abi-software/svg-sprite" "1.0.4"
     "@element-plus/icons-vue" "^2.3.1"
@@ -183,6 +183,19 @@
   dependencies:
     "@abi-software/plotvuer" "1.0.7"
     "@opencor/opencor" "^0.20260304.2"
+    element-plus "2.8.4"
+    jsonschema "^1.4.0"
+    mathjs "^15.1.0"
+    unplugin-vue-components "^0.26.0"
+    vue "^3.4.21"
+
+"@abi-software/simulationvuer@3.0.13":
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/@abi-software/simulationvuer/-/simulationvuer-3.0.13.tgz#4ca229969522b60de9c2882455ac263094b715bc"
+  integrity sha512-+g6xIKdYmX9C2P7+zeNgRvDpbE7axyOgjDG/w8PA+UiHpOknwailmlanvVjDZUm5x1wmKB4dmStrcGD1q1su0w==
+  dependencies:
+    "@abi-software/plotvuer" "1.0.7"
+    "@opencor/opencor" "^0.20260311.0"
     element-plus "2.8.4"
     jsonschema "^1.4.0"
     mathjs "^15.1.0"
@@ -4406,6 +4419,20 @@
   version "0.20260304.2"
   resolved "https://registry.yarnpkg.com/@opencor/opencor/-/opencor-0.20260304.2.tgz#54276c98dbb2f693d09064dc4ae00d18bd60f35b"
   integrity sha512-VHjUDNjAtJVIUCQn8Wsgb0KsTXtZf0bCuXPStgd6gTaMtfpO3jbNepKeA6BLx6EASV/B5yfz2mXUxrtWDN3aeA==
+  dependencies:
+    "@napi-rs/keyring" "^1.2.0"
+    "@primeuix/themes" "^2.0.3"
+    "@primevue/auto-import-resolver" "4.2.5"
+    "@vueuse/core" "^14.2.1"
+    primeicons "^7.0.0"
+    primevue "4.2.5"
+    vue "3.4.21"
+    xxhash-wasm "^1.1.0"
+
+"@opencor/opencor@^0.20260311.0":
+  version "0.20260311.0"
+  resolved "https://registry.yarnpkg.com/@opencor/opencor/-/opencor-0.20260311.0.tgz#8f39d818c47a39e8d55108491a6af080c8836ba3"
+  integrity sha512-UA5eogQZR3vfqinyfUvv9yIxGL4jQ3ssyLO1tpAI6m8NPw4CfiXMw8ovSC0lrEgXovRIom0wLuJ4ZK3zTPgMrQ==
   dependencies:
     "@napi-rs/keyring" "^1.2.0"
     "@primeuix/themes" "^2.0.3"
