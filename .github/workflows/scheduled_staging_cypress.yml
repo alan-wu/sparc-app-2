@@ -61,7 +61,7 @@ jobs:
 
       - name: Get sha of latest deployment in main branch
         id: latest-deployment-sha
-        uses: ABI-Software/get-latest-deployment-sha@v1.0.0
+        uses: ABI-Software/get-latest-deployment-sha@v1.0.1
         with:
           repo_owner: alan-wu
           repo_name: sparc-app-2
