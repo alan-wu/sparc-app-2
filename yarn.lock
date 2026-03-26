@@ -67,10 +67,10 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/map-utilities@^1.7.6":
-  version "1.7.6"
-  resolved "https://registry.yarnpkg.com/@abi-software/map-utilities/-/map-utilities-1.7.6.tgz#03557a34fbf8f8f092cb762216a69581a329a842"
-  integrity sha512-hKI/VD0zphieSj1vkj3zhSXyThp3IjTcEzIQFAQ9FzyWMA03YYR0WgsMTbFmyn/7iN4nYRB/n+fmqIC6D4vjyg==
+"@abi-software/map-utilities@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@abi-software/map-utilities/-/map-utilities-1.8.0.tgz#a6a818c0dd1d78837aff74b55089e281dd572aca"
+  integrity sha512-iMJZqr92P6w9v6cy5qL0gNQWnEAPuOlJUovL4BSWeXdCOegDGuAoFVQFuKYOj2yR7tP/W/Y8IYoZFp7xuHRAZg==
   dependencies:
     "@abi-software/svg-sprite" "^1.0.1"
     "@element-plus/icons-vue" "^2.3.1"
@@ -17109,9 +17109,9 @@ zhead@^2.2.4:
   integrity sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==
 
 zincjs@^1.16.4:
-  version "1.16.5"
-  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.16.5.tgz#0f2f09e1b0d17cf747df102cfa5d843747a64b09"
-  integrity sha512-RZ6SGYWPFpOti195CKSRBA5xk0CalvVVPUmiOqSnuh4p0VcgUpeSO3Lb+ZPWT+MW76ssL0uOe62oRBbtpdVtUg==
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.17.0.tgz#827945d7260fa1f07abfee621cabb0a9a48b787c"
+  integrity sha512-eIVAHmFHHQSooXk8yv1KcOmH5vnnyyetuROGhG0pQkMUE4FOG+ZdlmH/HiWCDQjkPgYmRXYdCyciEEEBIrdyNQ==
   dependencies:
     css-element-queries "^1.2.2"
     lodash "^4.17.19"
