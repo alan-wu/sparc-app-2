@@ -67,10 +67,10 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/map-utilities@^1.7.6":
-  version "1.7.6"
-  resolved "https://registry.yarnpkg.com/@abi-software/map-utilities/-/map-utilities-1.7.6.tgz#03557a34fbf8f8f092cb762216a69581a329a842"
-  integrity sha512-hKI/VD0zphieSj1vkj3zhSXyThp3IjTcEzIQFAQ9FzyWMA03YYR0WgsMTbFmyn/7iN4nYRB/n+fmqIC6D4vjyg==
+"@abi-software/map-utilities@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@abi-software/map-utilities/-/map-utilities-1.8.1.tgz#9f7dcae1ba19fdbc6df944d5fb138014171fbb23"
+  integrity sha512-yinECWuKKq75me+JQSjatw8zlPrK7vK0apwDp4lPh+GnfIw271q1EJ22veJDZuQJKd6U+wjjolrAIPLAcXVBQg==
   dependencies:
     "@abi-software/svg-sprite" "^1.0.1"
     "@element-plus/icons-vue" "^2.3.1"
@@ -4637,10 +4637,10 @@
     marked "^15.0.7"
     ramda "^0.31.3"
 
-"@pennsieve-viz/micro-ct@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pennsieve-viz/micro-ct/-/micro-ct-1.0.2.tgz#cae1943710bf8bacd36d249c56287fd124c936b3"
-  integrity sha512-G6tB0sY1VRe4pTdxBS7VJK1iAeE+ZFOu4aTwTZ1q/dhq2+ySNtyuBMd3I73vGyVVG30CObb4uLXzyS2vQxQxEw==
+"@pennsieve-viz/micro-ct@1.0.71":
+  version "1.0.71"
+  resolved "https://registry.yarnpkg.com/@pennsieve-viz/micro-ct/-/micro-ct-1.0.71.tgz#d168a1929796e8d108ec1b0ef38bd56e58414899"
+  integrity sha512-x1D247I39YBSzbZK1QJCoKyVnDxEGDoPyA0keqG2WDpD+NT6mWnoqWm89+xDX/6VNrMzpJfOsL1pAcpjXM9wmQ==
   dependencies:
     "@vivjs/extensions" "^0.18.0"
     "@vivjs/layers" "^0.18.0"
@@ -13489,10 +13489,10 @@ pennsieve-dashboard@0.3.3:
     sass "^1.90.0"
     vue "^3.5.18"
 
-pennsieve-dashboard@0.3.71:
-  version "0.3.71"
-  resolved "https://registry.yarnpkg.com/pennsieve-dashboard/-/pennsieve-dashboard-0.3.71.tgz#0f3b0b98064ea9048eda9c90abb9cbfde7ed9cc7"
-  integrity sha512-Y2Kc4xovWkaMwemjmH0E9fY6qzFSO44i3PJxZPpU9UN5Q8Owkrt63U8cLlDPdnpvMO1GvjP73VPqerxuGZsuxw==
+pennsieve-dashboard@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pennsieve-dashboard/-/pennsieve-dashboard-1.0.0.tgz#4bf48c3f5939fa819057d635cf5a551f06641731"
+  integrity sha512-mgp2HtqfjSTBZ9LS1s4KP19FiPRXkeRheI7nrtD3X4vSybxfUZeJdJKrH9xaFiZ0cHh8t3vkuM5eO1n5DQ0Zwg==
   dependencies:
     "@element-plus/icons-vue" "^2.3.2"
     dompurify "^3.2.6"
@@ -14000,10 +14000,10 @@ potpack@^2.0.0:
   resolved "https://registry.yarnpkg.com/potpack/-/potpack-2.0.0.tgz#61f4dd2dc4b3d5e996e3698c0ec9426d0e169104"
   integrity sha512-Q+/tYsFU9r7xoOJ+y/ZTtdVQwTWfzjbiXBDMM/JKUux3+QPP02iUuIoeBQ+Ot6oEDlC+/PGjB/5A3K7KKb7hcw==
 
-precision-dashwidgets@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/precision-dashwidgets/-/precision-dashwidgets-0.5.6.tgz#b3b66e976663027c3186a7aedafcaae436f50852"
-  integrity sha512-uQrnVqItwU58eqaODNWngjVV9DxOqojF6Sls+kEwtRZ/iKok8TfdAuQU99IHtUH0TolteiPqiH3145boW6ciiA==
+precision-dashwidgets@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/precision-dashwidgets/-/precision-dashwidgets-1.0.0.tgz#a18fdfe4166441780bbc81418865c6fd9cda3d3e"
+  integrity sha512-YtSRnS3ZNzYGwQpWu0zil/d1/sZHuS6oWcNZrd4cWvxQMZEt5Z1cf5klm2i1SL0Xi8fg7wnNvkV1gZL7VAI3tw==
   dependencies:
     "@duckdb/duckdb-wasm" "^1.30.0"
     "@pennsieve-viz/core" "0.1.6"
@@ -15183,10 +15183,10 @@ source-map@^0.7.4:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
-sparc-dashwidgets@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/sparc-dashwidgets/-/sparc-dashwidgets-0.3.0.tgz#5e9877add42c4f13d791c3586dafe909e4a3dd85"
-  integrity sha512-IRSqxJRYJnYFcj3f5XjQy90npUdCVr+Fpxq426RuEeFCTYQKymhRbqaguLg8I3JOszCJbEszpKO9D3scBfjYHg==
+sparc-dashwidgets@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sparc-dashwidgets/-/sparc-dashwidgets-1.0.1.tgz#8ba66fd35892e1c457f6ffec55dd5ce361fefe58"
+  integrity sha512-71hvFLpplB9EbwRcpE1ghYr6Dp3nUaJiJrw4yvPqnRCI3KQfXfODD4v+TE5xwG5id3LWuAzGI68rbtHlGrQSyQ==
   dependencies:
     axios "^1.6.7"
     epic-spinners "^2.0.0"
@@ -17109,9 +17109,9 @@ zhead@^2.2.4:
   integrity sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==
 
 zincjs@^1.16.4:
-  version "1.16.5"
-  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.16.5.tgz#0f2f09e1b0d17cf747df102cfa5d843747a64b09"
-  integrity sha512-RZ6SGYWPFpOti195CKSRBA5xk0CalvVVPUmiOqSnuh4p0VcgUpeSO3Lb+ZPWT+MW76ssL0uOe62oRBbtpdVtUg==
+  version "1.18.5"
+  resolved "https://registry.yarnpkg.com/zincjs/-/zincjs-1.18.5.tgz#b1490429e7bad4af361201dd8834f4a88173103f"
+  integrity sha512-6R2742MFLssUQb51RLYqZQD2mxPyrg04DgcecbCC7z2MXO5h1yKnQhqJy4ArJlaSEu9K3uqc0u/cuuPpYX/Yrg==
   dependencies:
     css-element-queries "^1.2.2"
     lodash "^4.17.19"
