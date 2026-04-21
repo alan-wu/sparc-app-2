@@ -474,6 +474,7 @@ export default {
       algoliaId: config.public.ALGOLIA_APP_ID,
       pennsieveApi: config.public.discover_api_host.replace('/discover', ''),
       flatmapAPI: config.public.flatmap_api,
+      testDataLocation: config.public.TEST_DATA_LOCATION,
       nlLinkPrefix: '',
       rootUrl: config.public.ROOT_URL,
     }

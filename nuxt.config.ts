@@ -207,6 +207,7 @@ export default defineNuxtConfig({
       FLI_API_KEY: process.env.FLI_API_KEY || '',
       SHOW_SPARC_DASHBOARD: process.env.SHOW_SPARC_DASHBOARD || 'false',
       SHOW_COLLECTIONS_FEATURE: process.env.SHOW_COLLECTIONS_FEATURE || 'false',
+      TEST_DATA_LOCATION: process.env.TEST_DATA_LOCATION || '',
       gtm: {
         id: process.env.GOOGLE_TAG_MANAGER_ID || 'GTM-TPT2CVCS',
         defer: true,
@@ -234,7 +235,7 @@ export default defineNuxtConfig({
     [
       '/api/__sitemap__/urls'
     ] : [],
-    exclude: process.env.DEPLOY_ENV === 'production' ? 
+    exclude: process.env.DEPLOY_ENV === 'production' ?
     [
       '/datasets/plotviewer',
       '/datasets/simulationviewer',
@@ -243,7 +244,7 @@ export default defineNuxtConfig({
       '/datasets/flatmapviewer',
       '/datasets/imageviewer',
       '/datasets/scaffoldviewer',
-    ] : ['/'],  
+    ] : ['/'],
     xslColumns: [
       { label: 'URL', width: '100%' }
     ],
@@ -251,17 +252,17 @@ export default defineNuxtConfig({
   robots: {
     // provide simple disallow rules for all robots `user-agent: *`
     // disallowing certain pages that are either redirects, authenticated routes, or causing bots to recursively crawl
-    disallow: process.env.DEPLOY_ENV === 'production' ? 
+    disallow: process.env.DEPLOY_ENV === 'production' ?
     [
       '/datasets/file',
       '/datasets/*/version/',
       '/file',
-      '/welcome', 
-      '/user', 
-      '/contact-us', 
+      '/welcome',
+      '/user',
+      '/contact-us',
       '/contact-us/*?*',
-      '/help', 
-      '/signup', 
+      '/help',
+      '/signup',
       '/maps',
       '/news-and-events/submit',
       '/news-and-events/community-spotlight/submit',
