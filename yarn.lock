@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@abi-software/flatmapvuer@1.13.1-simulation.5":
-  version "1.13.1-simulation.5"
-  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.13.1-simulation.5.tgz#59b8c4cd683226cbe76b35fe3418ace80aecf892"
-  integrity sha512-vtPtamGt4+yF8/uL/wCwzHhoqM9sLN5fKX+oAMPcAczfoxZxGutOriqhVMuWGlWoRJAkg+ThlPio33kD9QZ2Ng==
+"@abi-software/flatmapvuer@1.13.1-simulation.6":
+  version "1.13.1-simulation.6"
+  resolved "https://registry.yarnpkg.com/@abi-software/flatmapvuer/-/flatmapvuer-1.13.1-simulation.6.tgz#89fcdb8ed59a596e84f78ad9f076f2ee4a43daa0"
+  integrity sha512-T8RLfJh1F5wj2QHE9t4zxe/Y5vCrjPIGek1lvm+Eg+BcfSBL4YHccZUk3cIqnRrZIfYTvnuIg1DoPNktEk/gVw==
   dependencies:
     "@abi-software/map-utilities" "1.8.1"
     "@abi-software/sparc-annotation" "0.3.2"
@@ -67,12 +67,12 @@
     mitt "^3.0.1"
     vue "^3.4.21"
 
-"@abi-software/mapintegratedvuer@1.17.3-simulation.1":
-  version "1.17.3-simulation.1"
-  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.17.3-simulation.1.tgz#bc2c3f7d6cf98173e48b4e56d6455c9677a6272b"
-  integrity sha512-/dYYfzW5NmgfRh3oIDjuvUKRdUi/SHrWI0vIYZcfgWWEv6mcnRRLO6RhY1U+oV5jn6eomxMLFGcCtBr69KO4Yw==
+"@abi-software/mapintegratedvuer@1.17.3-simulation.2":
+  version "1.17.3-simulation.2"
+  resolved "https://registry.yarnpkg.com/@abi-software/mapintegratedvuer/-/mapintegratedvuer-1.17.3-simulation.2.tgz#28c67eb072db2f533d4fe8f5a434cdc7d434a7ac"
+  integrity sha512-MYDbmWk+HwZYnbwWbkbqo1vwcv5m0I4FebJPpkBgzpfmHmyuQxQf0M2ltjgN6D6n618z4KWtbnnGVhgsHMw07A==
   dependencies:
-    "@abi-software/flatmapvuer" "1.13.1-simulation.5"
+    "@abi-software/flatmapvuer" "1.13.1-simulation.6"
     "@abi-software/map-side-bar" "2.14.1-simulation.8"
     "@abi-software/map-utilities" "1.8.1"
     "@abi-software/plotvuer" "1.0.7"

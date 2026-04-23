@@ -3,6 +3,7 @@ import { resolve } from 'pathe'
 
 export default defineNuxtConfig({
   app: {
+    baseURL: "/2026/sparc-app-aps",
     head: {
       title: 'SPARC Portal',
       meta: [
@@ -213,7 +214,7 @@ export default defineNuxtConfig({
         defer: true,
         compatibility: false,
         source: 'https://www.googletagmanager.com/gtm.js',
-        enabled: process.env.ROOT_URL == 'https://sparc.science' ? true : false,
+        enabled: true,
         debug: true,
         loadScript: true,
         enableRouterSync: true,
@@ -223,6 +224,9 @@ export default defineNuxtConfig({
     },
     turnstile: {
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
+    },
+    app: {
+      baseURL: "/2026/sparc-app-aps"
     }
   },
   /*

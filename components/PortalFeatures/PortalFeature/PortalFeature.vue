@@ -14,11 +14,11 @@
       :src=iconUrl
     />
     <div class="body1 mt-16" v-html="parseMarkdown(description)" />
-    <a class="button-link" :href="buttonLink">
+    <nuxt-link class="button-link" :to="buttonLink">
       <el-button class="secondary">
         {{ buttonText }}
       </el-button>
-    </a>
+    </nuxt-link>
   </div>
 </template>
 
