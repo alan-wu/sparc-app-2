@@ -38,7 +38,7 @@
                   <img class="footer-logo mb-32" src="/100013719.svg" alt="re3data badge"/>
                 </a>
                 <a href="https://registry.opendata.aws/sparc/">
-                  <img class="footer-logo mr-32 mb-32" src="/powered-by-aws.png" alt="Powered by AWS Cloud Computing">
+                  <img class="footer-logo mr-32 mb-32" src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="Powered by AWS Cloud Computing">
                 </a>
                 <a href="https://www.autonomicneuroscience.com/">
                   <img class="footer-logo mr-32 mb-32" :src="anbcLogo" />

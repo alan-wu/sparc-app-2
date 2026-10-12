@@ -5,6 +5,7 @@
 
 // Hostnames only (compared against URL.hostname).
 const ALLOWED_HOSTS = [
+  // "Powered by AWS" logo in the footer (components/Footer)
   'd0.awsstatic.com',
   // CFDE wheel in the footer (components/CfdeWheel) - its logos are hardcoded in the embed script
   'cfde-drc.s3.amazonaws.com',
