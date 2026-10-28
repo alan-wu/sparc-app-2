@@ -48,6 +48,7 @@ async function call(base, token, method, path, body, fetchFn) {
 // redirects to the presigned one, for a client that can't carry a presigned
 // link (Microsoft's Office viewer caps the URL it opens).
 export function publicFileUrl({ base, token, datasetId, version, path, purpose, short }, fetchFn = globalThis.fetch) {
+  console.log(`PublicFileLink: Is it short? ${short}`)
   const body = { datasetId: Number(datasetId), version: Number(version) || undefined, paths: [path] }
   if (purpose) body.purpose = purpose
   if (short) body.short = true

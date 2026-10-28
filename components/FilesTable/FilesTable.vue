@@ -610,6 +610,7 @@ export default {
      */
     getViewFileUrl(scope) {
       const office = this.isMicrosoftFileType(scope)
+      console.log(`It is office ${office}`)
       return usePublicFileLink({
         datasetId: this.datasetInfo.id,
         version: this.datasetVersion,
